@@ -1,7 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { makeStyles } from "@material-ui/core";
 
-
 declare module "@mui/material/styles" {
   interface TypographyVariants {
     heading: React.CSSProperties;
@@ -29,9 +28,7 @@ declare module "@mui/material/Typography" {
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: "#2CE080",
-      light: "#E2F2E9",
-      dark: "#22C870",
+      main: "#FFA74F",
     },
     secondary: {
       main: "#116BE9",
@@ -84,125 +81,208 @@ const customTheme = createTheme({
 export default customTheme;
 
 var customStyles = makeStyles({
- 
-  verticalHeader:{
-    
-      display:"flex",
-      flexDirection: "column",
-      alignItems: "flex-start",
-      position: "absolute",
-      width: "80px",
-      height: "728px",
-      left: "25px",
-      top: "30px"
-              
+  verticalHeader: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    position: "absolute",
+    width: "80px",
+    height: "728px",
+    left: "25px",
+    top: "30px",
   },
 
-  
-
-  one:{
-   
-    width:"18.64px",
-    height:"15.93px",
-    left:"6.68px",
-   
-
+  one: {
+    width: "18.64px",
+    height: "15.93px",
+    left: "6.68px",
   },
 
-  checkout:{
+  checkout: {
     width: "109px",
     height: "34px",
-    fontFamily: 'Graphik',
+    fontFamily: "Graphik",
     fontStyle: "normal",
     fontWeight: 400,
     fontSize: "24px",
     lineHeight: "34px",
-    color: "#343446"
-
+    color: "#343446",
   },
 
-  sellButton:{
-    width:"120px",
+  sellButton: {
+    width: "120px",
     height: "42px",
     background: "#FFA74F",
     borderRadius: "4px",
-    alignItems:"center"
-
+    alignItems: "center",
   },
 
-  buyNowButton:{
-
-      width: "108px",
-      height: "28px",
-      fontFamily: 'Graphik',
-      fontStyle: "normal",
-      fontWeight: 600,
-      fontSize: "20px",
-      lineHeight: "28px",
-      color: "#343446"
-    
+  buyNowButton: {
+    width: "108px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "20px",
+    lineHeight: "28px",
+    color: "#343446",
   },
 
-  choose:{
+  choose: {
     width: "114px",
-    height: "22px", 
-    fontFamily: 'Graphik',
+    height: "22px",
+    fontFamily: "Graphik",
     fontStyle: "normal",
     fontWeight: 500,
     fontSize: "16px",
-    lineHeight: '22px',
-    letterSpacing: '0.01em',
-    color: '#343446'
+    lineHeight: "22px",
+    letterSpacing: "0.01em",
+    color: "#343446",
   },
 
-  coinGrid:{
-    display:"flex",  
+  coinGrid: {
+    display: "flex",
     flexDirection: "column",
-    position:"absolute",
-    alignItems:"center",
-
-   
-  
+    position: "absolute",
+    alignItems: "center",
   },
 
-  coinName:{
+  coinName: {
     width: "55px",
     height: "22px",
     lineHeight: "22px",
-    color: "#4B4B60"
-
+    color: "#4B4B60",
   },
 
-  footerElement:{
+  footerElement: {
     width: "83px",
     height: "22px",
-    fontFamily: 'Graphik',
-    fontStyle: 'normal',
+    fontFamily: "Graphik",
+    fontStyle: "normal",
     fontWeight: 400,
-    fontSize: '16px',
+    fontSize: "16px",
     lineHeight: "22px",
-    color: '#0052FF'
-
+    color: "#0052FF",
   },
 
-  footerElement2:{
+  footerElement2: {
     width: "83px",
     height: "22px",
-    fontFamily: 'Graphik',
-    fontStyle: 'normal',
+    fontFamily: "Graphik",
+    fontStyle: "normal",
     fontWeight: 400,
-    fontSize: '16px',
+    fontSize: "16px",
     lineHeight: "22px",
-    color: '#343446'
-
+    color: "#343446",
   },
 
-  footer:{
-    position:'absolute',
-    top:'100vh',
-    left:"80px"
-  }
-  
+  footer: {
+    position: "absolute",
+    top: "1400px",
+    left: "80px",
+  },
 
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+
+  currency: {
+    width: "250px",
+    height: "16px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "14px",
+    lineHeight: "16px",
+    color: "#343446",
+  },
+
+  totalBalance: {
+    width: "251px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "20px",
+    lineHeight: "28px",
+    color: "#7D7D89",
+  },
+
+  amountDetailsPrice: {
+    width: "118px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "20px",
+    lineHeight: "28px",
+    color: "#343446",
+  },
+
+  transaction: {
+    width: "101px",
+    height: "16px",
+    fontfamily: "Graphik",
+    fontstyle: "normal",
+    fontweight: 500,
+    fontsize: "14px",
+    lineHeight: "16px",
+    color: "#7D7D89",
+  },
+
+  price: {
+    width: "171px",
+    height: "34px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "24px",
+    lineHeight: "34px",
+    color: "#343446",
+  },
+
+  paymentMethoddiv: {
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "16px",
+    color: "#7D7D89",
+  },
+
+  visaCredit: {
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+
+  divTypo: {
+    width: "86px",
+    height: "14px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "10px",
+    lineHeight: "14px",
+    color: "#343446",
+  },
+
+  divTypo2: {
+    width: "94px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
 });
+
 export { customStyles };

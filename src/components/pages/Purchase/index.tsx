@@ -1,77 +1,74 @@
-import React from 'react'
-import Template from '../../templates/index'
-import HorizontalHeader from '../../organisms/HeaderH/index'
-import VerticalHeader from '../../organisms/HeaderV/index'
-import { Grid } from '@mui/material'
-import Typo from '../../atoms/Typo/index'
-import { customStyles } from '../../../theme'
+import React from "react";
+import Template from "../../templates/index";
+import HorizontalHeader from "../../organisms/HeaderH/index";
+import VerticalHeader from "../../organisms/HeaderV/index";
+import { Grid, Typography } from "@mui/material";
+import Typo from "../../atoms/Typo/index";
+import { customStyles } from "../../../theme";
+import Footer from "../../organisms/Footer/index";
+import CryptoGrid from "../../organisms/CryptoGrid/index";
+import ViewTransaction from "../../molecules/ViewTransaction/index";
+import PaymentMethod from "../../molecules/Payment Method/index";
+import AmountDetails from "../../molecules/AmountDetails/index";
+import SpeedDelivery from "../../molecules/SpeedDelivery/index";
 
 const index = () => {
-
-    const classes=customStyles();
+  const classes = customStyles();
   return (
-    <Template HorizontalHeader={<HorizontalHeader/>} VerticalHeader={<VerticalHeader/>}
-    
-    Content={
+    <Template
+      HorizontalHeader={<HorizontalHeader />}
+      VerticalHeader={<VerticalHeader />}
+      Content={
         <>
-            <Grid item container >
-                
-                <Grid item container>
-                    
-                     <Grid item sx={{ position: "absolute", left: "106px", top: "104px" }}>
-                        <Typo variant="subtitle1" text="Buy Crypto" component="div" className={classes.buyNowButton} />
-                    </Grid>
-                    
-                    <Grid>
-
-                        <Grid item sx={{ position: "absolute", left: "128px", top: "155px" }}>
-                            <Typo variant="body1" text="Choose one" component="div" className={classes.choose} />
-
-                        </Grid>
-
-                        <Grid container sx={{ position: "absolute", left: "128px", top: "200px" }} >
-
-                            <Grid item container direction="row">
-
-                                <Grid item direction="column" className={classes.coinGrid}>
-                                    <Grid item >
-                                        <img src="" alt="explore" width="56px" height="56px" />
-                                    </Grid>
-                                    <Grid item>
-                                        <Typo variant="body1" text="Bitcoin" component="div" className={classes.coinName} />
-                                    </Grid>
-                                    <Grid item >
-                                        <Typo variant="body1" text="$3,406,069.54" component="div" className={classes.coinName} />
-
-                                    </Grid>
-
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-                        </Grid>
-
-                        <Grid container sx={{ position: "absolute", left: "128px", top: "370px" }} >
-
-                            <Grid item ></Grid>
-
-
-
-                        </Grid>
-
-
-                    </Grid>
-                </Grid>
+          <Grid sx={{ position: "absolute", left: "104px", top: "106px" }}>
+            <Grid>
+              <Typography variant="subtitle1" component="div">
+                Buy Crypto
+              </Typography>
             </Grid>
 
+            <Grid sx={{ position: "absolute", left: "109px", top: "50px" }}>
+              <Typography
+                variant="body1"
+                component="div"
+                width="114px"
+                sx={{ fontSize: "16px" }}
+              >
+                Choose crypto
+              </Typography>
+            </Grid>
+
+            <Grid sx={{ position: "absolute", left: "75px", top: "96px" }}>
+              <CryptoGrid />
+            </Grid>
+
+            <Grid sx={{ position: "absolute", left: "65px", top: "500px" }}>
+              <PaymentMethod />
+            </Grid>
+
+            <Grid sx={{ position: "absolute", left: "65px", top: "700px" }}>
+              <AmountDetails />
+            </Grid>
+
+            <Grid sx={{ position: "absolute", left: "65px", top: "1100px" }}>
+              <SpeedDelivery />
+            </Grid>
+          </Grid>
+
+          <Grid
+            sx={{
+              position: "absolute",
+              left: "838px",
+              top: "103px",
+            }}
+          >
+            <ViewTransaction transaction="You are buying" />
+          </Grid>
         </>
+      }
+      Footer={<Footer />}
+    />
+  );
+};
 
-   
-    }/>
-  )
-}
-
-export default index
+export default index;
