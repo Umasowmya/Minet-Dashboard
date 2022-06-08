@@ -41,7 +41,7 @@ const index = ({ image, title, price }: coinProps) => {
     >
       <Grid container alignItems="center" direction="column">
         <Grid item>
-          <img src="binance.png" alt="explore" width="56px" height="56px" />
+          <img src={image} alt="explore" width="56px" height="56px" />
         </Grid>
         <Grid item>
           <Typo

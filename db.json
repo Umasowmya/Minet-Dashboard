@@ -2,96 +2,96 @@
 
   "cryptoGrids":[
     {
-      "image": "../../../assets/crypto/explore.png",
+      "image": "explore.png",
       "title": "Bitcoin",
       "price": "$3,406,069.54"
     },
 
     {
-      "image": "../../../assets/crypto/etherum.png",
+      "image": "etherum.png",
       "title": "Etherum",
       "price": "$240,048.03"
     },
 
     {
-      "image": "/crypto/binance.png",
+      "image": "binance.png",
       "title": "Binance",
       "price": "$30,054.88"
     },
 
     {
-      "image": "/crypto/Tether.png",
+      "image": "Tether.png",
       "title": "Tether",
       "price": "$74.21"
     },
 
     {
-      "image": "/crypto/cardano.png",
+      "image": "cardano.png",
       "title": "Cardono",
       "price": "$138.22"
     },
 
     {
-      "image": "/crypto/xrp.png",
+      "image": "xrp.png",
       "title": "XRP",
       "price": "$76.73"
     },
 
     {
-      "image": "/crypto/dogecoin.png",
+      "image": "dogecoin.png",
       "title": "Dogcoin",
       "price": "$21.37"
     },
 
     {
-      "image": "/crypto/polka.png",
+      "image": "polka.png",
       "title": "Polkadot",
       "price": "$1642.39"
     },
 
     {
-      "image": "/crypto/cardano.png",
+      "image": "cardano.png",
       "title": "Cardono",
       "price": "$138.22"
     },
 
     {
-      "image": "/crypto/xrp.png",
+      "image": "xrp.png",
       "title": "XRP",
       "price": "$76.73"
     },
 
     {
-      "image": "/crypto/.dogecoinpng",
+      "image": "dogecoin.png",
       "title":"Dogcoin",
       "price": "$21.37"
     },
 
     {
-      "image": "/crypto/polka.png",
+      "image": "polka.png",
       "title": "Polkadot",
       "price": "$1642.39"
     },
     {
-      "image": "/crypto/explore.png",
+      "image": "explore.png",
       "title": "Bitcoin",
       "price": "$3,406,069.54"
     },
 
     {
-      "image": "/crypto/etherum.png",
+      "image": "etherum.png",
       "title": "Etherum",
       "price": "$240,048.03"
     },
 
     {
-      "image": "/crypto/binance.png",
+      "image": "binance.png",
       "title": "Binance",
       "price": "$30,054.88"
     },
 
     {
-      "image": "/crypto/Tether.png",
+      "image": "Tether.png",
       "title": "Tether",
       "price": "$74.21"
     }
