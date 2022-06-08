@@ -1,0 +1,99 @@
+{
+
+  "cryptoGrids":[
+    {
+      "image": "../../../assets/crypto/explore.png",
+      "title": "Bitcoin",
+      "price": "$3,406,069.54"
+    },
+
+    {
+      "image": "../../../assets/crypto/etherum.png",
+      "title": "Etherum",
+      "price": "$240,048.03"
+    },
+
+    {
+      "image": "/crypto/binance.png",
+      "title": "Binance",
+      "price": "$30,054.88"
+    },
+
+    {
+      "image": "/crypto/Tether.png",
+      "title": "Tether",
+      "price": "$74.21"
+    },
+
+    {
+      "image": "/crypto/cardano.png",
+      "title": "Cardono",
+      "price": "$138.22"
+    },
+
+    {
+      "image": "/crypto/xrp.png",
+      "title": "XRP",
+      "price": "$76.73"
+    },
+
+    {
+      "image": "/crypto/dogecoin.png",
+      "title": "Dogcoin",
+      "price": "$21.37"
+    },
+
+    {
+      "image": "/crypto/polka.png",
+      "title": "Polkadot",
+      "price": "$1642.39"
+    },
+
+    {
+      "image": "/crypto/cardano.png",
+      "title": "Cardono",
+      "price": "$138.22"
+    },
+
+    {
+      "image": "/crypto/xrp.png",
+      "title": "XRP",
+      "price": "$76.73"
+    },
+
+    {
+      "image": "/crypto/.dogecoinpng",
+      "title":"Dogcoin",
+      "price": "$21.37"
+    },
+
+    {
+      "image": "/crypto/polka.png",
+      "title": "Polkadot",
+      "price": "$1642.39"
+    },
+    {
+      "image": "/crypto/explore.png",
+      "title": "Bitcoin",
+      "price": "$3,406,069.54"
+    },
+
+    {
+      "image": "/crypto/etherum.png",
+      "title": "Etherum",
+      "price": "$240,048.03"
+    },
+
+    {
+      "image": "/crypto/binance.png",
+      "title": "Binance",
+      "price": "$30,054.88"
+    },
+
+    {
+      "image": "/crypto/Tether.png",
+      "title": "Tether",
+      "price": "$74.21"
+    }
+  ]
+}

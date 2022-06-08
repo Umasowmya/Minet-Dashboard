@@ -4,6 +4,7 @@ import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import { borderColor } from "@mui/system";
 import { BorderVertical } from "@mui/icons-material";
+import explore from "../../../assets/crypto/explore.png";
 
 interface coinProps {
   image: string;
@@ -40,7 +41,7 @@ const index = ({ image, title, price }: coinProps) => {
     >
       <Grid container alignItems="center" direction="column">
         <Grid item>
-          <img src={image} alt="explore" width="56px" height="56px" />
+          <img src="binance.png" alt="explore" width="56px" height="56px" />
         </Grid>
         <Grid item>
           <Typo

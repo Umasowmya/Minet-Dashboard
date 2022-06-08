@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
-import explore from "../../../assets/explore.png";
+import explore from "../../../assets/crypto/explore.png";
 
 const index = () => {
   const classes = customStyles();

@@ -36,6 +36,7 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
+        posiotn: "relative",
       }}
       spacing={5}
     >
