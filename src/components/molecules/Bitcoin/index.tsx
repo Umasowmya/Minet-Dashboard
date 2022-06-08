@@ -24,14 +24,6 @@ const index = ({ image, title, price }: coinProps) => {
   const handleClick = () => {
     setFlag(!flag);
     setBorder(flag ? "2px solid #0052FF" : "2px solid #FFFFF");
-
-    // const border = () => {
-    //   var borderval;
-    //   flag
-    //     ? (borderval = "2px solid #0052FF")
-    //     : (borderval = "2px solid #FFFFF");
-    //   return borderval;
-    // };
   };
 
   return (
