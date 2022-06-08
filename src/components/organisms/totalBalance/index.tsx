@@ -2,8 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
-import delivery from "../../../assets/delivery.png";
-import { KeyboardArrowDown } from "@mui/icons-material";
+import explore from "../../../assets/explore.png";
 
 const index = () => {
   const classes = customStyles();
@@ -16,7 +15,6 @@ const index = () => {
         height: "190px",
         width: "710px",
         border: "1px solid #E8E8F7",
-        p: 2,
       }}
       spacing={5}
     >
@@ -25,60 +23,41 @@ const index = () => {
           variant="body1"
           component="div"
           className={classes.paymentMethod}
-          text="Select speed delivery"
-          width="200px"
+          text="Total Balance"
         />
       </Grid>
 
       <Grid
         item
         direction="row"
+        alignItems="center"
         sx={{
           height: "90px",
           width: "100%",
           display: "flex",
           border: "1px solid #E8E8F7",
+          alignItems: "center",
         }}
       >
-        <Grid item sx={{ flexDirection: "flex-start" }}>
-          <img src={delivery} alt="logo" width="25px" height="25px" />
+        <Grid
+          item
+          sx={{
+            flexDirection: "flex-start",
+          }}
+        >
+          <img src={explore} alt="logo" width="25px" height="25px" />
         </Grid>
 
-        <Grid item container>
+        <Grid>
+          <Typo component="div" text="" width="20px" />
+        </Grid>
+
+        <Grid item sm={1}>
           <Typo
             component="div"
-            className={classes.paymentMethod}
-            text=""
-            width="30px"
-          />
-        </Grid>
-
-        <Grid item direction="column">
-          <Grid item sm={1}>
-            <Typo
-              component="div"
-              width="160px"
-              text="Instant: 2-5 minutes"
-              className={classes.currency}
-            />
-          </Grid>
-
-          <Grid item sm={1}>
-            <Typo
-              component="div"
-              width="240px"
-              text="Transaction fees : 0.001 BTC"
-              className={classes.totalBalance}
-            />
-          </Grid>
-        </Grid>
-
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.paymentMethod}
-            text=""
-            width="220px"
+            width="90px"
+            text="Bitcoin"
+            className={classes.currency}
           />
         </Grid>
 
@@ -86,7 +65,25 @@ const index = () => {
           <Typo
             component="div"
             className={classes.paymentMethod}
-            text={<KeyboardArrowDown />}
+            text=""
+            width="5px"
+          />
+        </Grid>
+        <Grid item container>
+          <Typo
+            component="div"
+            className={classes.paymentMethod}
+            text=""
+            width="200px"
+          />
+        </Grid>
+
+        <Grid item container>
+          <Typo
+            component="div"
+            width="120px"
+            className={classes.amountDetailsPrice}
+            text="0.0234510 BTC"
           />
         </Grid>
       </Grid>

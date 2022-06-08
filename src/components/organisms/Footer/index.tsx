@@ -60,6 +60,8 @@ const index = () => {
           sx={{
             position: "absolute",
             left: "77%",
+            borderColor: "#E8E8F7",
+            color: "black",
           }}
           children="English"
         />

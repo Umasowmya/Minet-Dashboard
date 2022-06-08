@@ -1,80 +1,63 @@
-import { Box, Grid } from '@mui/material'
-import React from 'react'
-import {customStyles} from '../../../theme/index'
-import logo  from '../../../assets/Vector.png'
-import one from '../../../assets/1.png'
-import two from '../../../assets/2.png'
-import three from '../../../assets/3.png'
-import logo1 from '../../../assets/logo1.png'
-import four from '../../../assets/4.png'
-import five from '../../../assets/5.png'
-import Typo from '../../atoms/Typo/index'
-import { ClassNames } from '@emotion/react'
-import Buttons from '../../atoms/Buttons/Buttons'
-import Ava from '../../atoms/Avatar/index'
-import img from '../../../assets/avatar.png'
-import {KeyboardArrowUp ,KeyboardArrowDown }from '@mui/icons-material'
-import explore from '../../../assets/explore.png'
+import { Box, Grid } from "@mui/material";
+import React from "react";
+import { customStyles } from "../../../theme/index";
+import logo from "../../../assets/Vector.png";
+import one from "../../../assets/1.png";
+import two from "../../../assets/2.png";
+import three from "../../../assets/3.png";
+import logo1 from "../../../assets/logo1.png";
+import four from "../../../assets/4.png";
+import five from "../../../assets/5.png";
+import Typo from "../../atoms/Typo/index";
+import { ClassNames } from "@emotion/react";
+import Buttons from "../../atoms/Buttons/Buttons";
+import Ava from "../../atoms/Avatar/index";
+import img from "../../../assets/avatar.png";
+import { KeyboardArrowUp, KeyboardArrowDown } from "@mui/icons-material";
+import explore from "../../../assets/explore.png";
 
 const index = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [clicked, handler] = React.useState(false);
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [clicked, handler] = React.useState(false);
-
-
-    const classes = customStyles();
+  const classes = customStyles();
 
   return (
-      /*<Grid container direction="column" className={classes.verticalHeader}>*/
-        <>
-          <Grid item direction="column" className={classes.verticalHeader}/>
-                
-                 <Grid item sx={{ position: "absolute", top: "24px" }}>
-                        <img src={logo1} alt="logo1" width="30px" height="30px" />
+    <>
+      <Grid item direction="column" className={classes.verticalHeader} />
 
-                </Grid>
+      <Grid item sx={{ position: "absolute", top: "24px" }}>
+        <img src={logo1} alt="logo1" width="30px" height="30px" />
+      </Grid>
 
-                <Grid item sx={{position:"absolute",top:"32px",left:"6px"}}>
+      <Grid item sx={{ position: "absolute", top: "32px", left: "6px" }}>
+        <img src={logo} alt="logo" width="18px" height="18px" />
+      </Grid>
 
-                    <img src={logo} alt="logo" width="18px" height="18px"/>
+      <Grid item sx={{ position: "absolute", top: "107px" }}>
+        <img src={one} alt="logo" width="16px" height="16px" />
+      </Grid>
 
-                </Grid>
+      <Grid item sx={{ position: "absolute", top: "193px" }}>
+        <img src={two} alt="logo" width="16px" height="16px" />
+      </Grid>
 
-                <Grid item sx={{position:"absolute",top:"107px"}} >
+      <Grid item sx={{ position: "absolute", top: "259px" }}>
+        <img src={three} alt="logo" width="16px" height="16px" />
+      </Grid>
 
-                    <img src={one} alt="logo" width="16px" height="16px"/>
+      <Grid item sx={{ position: "absolute", top: "335px" }}>
+        <img src={four} alt="logo" width="16px" height="16px" />
+      </Grid>
 
-                 </Grid>
+      <Grid item sx={{ position: "absolute", top: "441px" }}>
+        <img src={five} alt="logo" width="16px" height="16px" />
+      </Grid>
 
-                <Grid item  sx={{position:"absolute",top:"193px"}} >
+      <Grid />
+    </>
 
-                     <img src={two} alt="logo" width="16px" height="16px"/>
-
-                </Grid>
-
-                <Grid item sx={{position:"absolute",top:"259px"}}  >
-
-                    <img src={three} alt="logo" width="16px" height="16px"/>
-
-                </Grid>
-
-                <Grid item  sx={{position:"absolute",top:"335px"}} >
-
-                    <img src={four} alt="logo" width="16px" height="16px"/>
-
-                </Grid>
-
-                <Grid item sx={{position:"absolute",top:"441px"}}>
-
-                    <img src={five} alt="logo" width="16px" height="16px"/>
-
-                </Grid>
-            
-            <Grid/>
-
-            </>
-        
-        /*
+    /*
 
         <Grid item container>
             <Grid item sx={{position:"absolute",left:"100px"}} >
@@ -150,7 +133,7 @@ const index = () => {
         </Grid>
     </Grid>
   </Grid>*/
-  )
-}
+  );
+};
 
-export default index
+export default index;

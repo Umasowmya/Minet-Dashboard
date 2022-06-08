@@ -7,10 +7,10 @@ import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme";
 import Footer from "../../organisms/Footer/index";
 import CryptoGrid from "../../organisms/CryptoGrid/index";
-import ViewTransaction from "../../molecules/ViewTransaction/index";
-import PaymentMethod from "../../molecules/Payment Method/index";
-import AmountDetails from "../../molecules/AmountDetails/index";
-import SpeedDelivery from "../../molecules/SpeedDelivery/index";
+import ViewTransaction from "../../organisms/ViewTransaction/index";
+import TotalBalance from "../../organisms/totalBalance/index";
+import AmountDetails from "../../organisms/AmountDetails/index";
+import Deposit from "../../organisms/deposit/index";
 
 const index = () => {
   const classes = customStyles();
@@ -27,7 +27,13 @@ const index = () => {
               </Typography>
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "109px", top: "50px" }}>
+            <Grid
+              sx={{
+                position: "absolute",
+                left: "109px",
+                top: "50px",
+              }}
+            >
               <Typography
                 variant="body1"
                 component="div"
@@ -43,26 +49,40 @@ const index = () => {
             </Grid>
 
             <Grid sx={{ position: "absolute", left: "65px", top: "500px" }}>
-              <PaymentMethod />
+              <TotalBalance />
             </Grid>
 
             <Grid sx={{ position: "absolute", left: "65px", top: "700px" }}>
-              <AmountDetails />
+              <AmountDetails
+                buttonval="Buy max"
+                value="BTC"
+                label2="0.0234510 "
+                label1="$34,000.00"
+              />
             </Grid>
 
             <Grid sx={{ position: "absolute", left: "65px", top: "1100px" }}>
-              <SpeedDelivery />
+              <Deposit />
             </Grid>
           </Grid>
 
           <Grid
             sx={{
               position: "absolute",
-              left: "838px",
+              left: "858px",
               top: "103px",
             }}
           >
-            <ViewTransaction transaction="You are buying" />
+            <ViewTransaction
+              transaction="You are buying"
+              label11="Payment method"
+              label12="Visa credit ...8845"
+              label21="Delivery fees"
+              label22="0.001BTC"
+              label31="Deposit to"
+              label32="Bitcoin wallet"
+              button="BUY NOW"
+            />
           </Grid>
         </>
       }

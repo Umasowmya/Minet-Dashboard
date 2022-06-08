@@ -6,7 +6,14 @@ import Buttons from "../../atoms/Buttons/Buttons";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
 
-const index = () => {
+interface amountProps {
+  buttonval: string;
+  value: string;
+  label1: string;
+  label2: string;
+}
+
+const index = ({ buttonval, value, label1, label2 }: amountProps) => {
   function valuetext(value: number) {
     return `1BTC=$${value}`;
   }
@@ -14,7 +21,7 @@ const index = () => {
   const marks = [
     {
       value: 50,
-      label: "3,406,069.54",
+      label: "1BTC=3,406,069.54",
     },
   ];
 
@@ -57,7 +64,7 @@ const index = () => {
           <Typo
             component="div"
             className={classes.amountDetailsPrice}
-            text="$34,000.00"
+            text={label1}
             width="300px"
           />
         </Grid>
@@ -74,7 +81,7 @@ const index = () => {
         <Grid item container>
           <Buttons
             variant="outlined"
-            children="Buy max"
+            children={buttonval}
             sx={{ width: "120px", height: "40px" }}
           />
         </Grid>
@@ -115,8 +122,8 @@ const index = () => {
           <Typo
             component="div"
             className={classes.amountDetailsPrice}
-            text="0.0234510 "
-            width="300px"
+            text={label2}
+            width="250px"
           />
         </Grid>
 
@@ -125,7 +132,7 @@ const index = () => {
             component="div"
             className={classes.paymentMethod}
             text=""
-            width="265px"
+            width="225px"
           />
         </Grid>
 
@@ -133,8 +140,8 @@ const index = () => {
           <Typo
             component="div"
             className={classes.amountDetailsPrice}
-            text="BTC "
-            width="100px"
+            text={value}
+            width="120px"
           />
         </Grid>
       </Grid>

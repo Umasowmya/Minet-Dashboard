@@ -72,7 +72,7 @@ const index = ({ text, button1, button2 }: Props) => {
           <Grid item>
             <Buttons
               variant="contained"
-              sx={{ width: "150px", height: "45px" }}
+              sx={{ width: "180px", height: "45px" }}
               children={button2}
             />
           </Grid>

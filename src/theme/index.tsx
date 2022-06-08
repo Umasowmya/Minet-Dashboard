@@ -195,7 +195,7 @@ var customStyles = makeStyles({
 
   currency: {
     width: "250px",
-    height: "16px",
+    height: "28px",
     fontFamily: "Graphik",
     fontStyle: "normal",
     fontWeight: 500,
@@ -221,7 +221,7 @@ var customStyles = makeStyles({
     fontFamily: "Graphik",
     fontStyle: "normal",
     fontWeight: 500,
-    fontSize: "20px",
+    fontSize: "18px",
     lineHeight: "28px",
     color: "#343446",
   },
@@ -256,7 +256,7 @@ var customStyles = makeStyles({
   },
 
   visaCredit: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: "16px",
     lineHeight: "22px",
     color: "#343446",

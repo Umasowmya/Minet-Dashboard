@@ -7,13 +7,33 @@ import delivery from "../../../assets/delivery.png";
 import deposit from "../../../assets/deposit.png";
 import dollar from "../../../assets/dollar.png";
 import payingThough from "../../../assets/payingThrough.png";
+import { useNavigate } from "react-router-dom";
 
 interface GridProps {
   transaction: string;
+  label11: string;
+  label12: string;
+  label21: string;
+  label22: string;
+  label31: string;
+  label32: string;
+  button: string;
 }
 
-const index = ({ transaction }: GridProps) => {
+const index = ({
+  transaction,
+  label11,
+  label12,
+  label21,
+  label22,
+  label31,
+  label32,
+  button,
+}: GridProps) => {
   const classes = customStyles();
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const navigate = useNavigate();
 
   return (
     <Grid
@@ -24,7 +44,7 @@ const index = ({ transaction }: GridProps) => {
       border="1px solid #E8E8F7"
       sx={{ width: "527px", height: "646px" }}
     >
-      <Grid item>
+      <Grid item sx={{ pt: 2 }}>
         <Typo
           variant="caption"
           component="div"
@@ -50,30 +70,44 @@ const index = ({ transaction }: GridProps) => {
           width="150px"
         />
       </Grid>
-      <Divider />
+      <Grid
+        sx={{
+          width: "523px",
+          pt: 2,
+          position: "absolute",
+          left: "0%",
+          top: "12%",
+        }}
+      >
+        <Divider textAlign="left"></Divider>
+      </Grid>
 
       <Grid item container direction="column">
         <Grid item alignItems="center">
           <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
-              <img src={payment} />
+              {transaction === "You are buying" ? (
+                <img src={payment} />
+              ) : (
+                <img src={payingThough} />
+              )}
             </Grid>
             <Grid direction="row">
               <Grid>
                 <Typo
                   variant="caption"
                   component="div"
-                  text="Payment Method"
+                  text={label11}
                   width="114px"
                   className={classes.paymentMethoddiv}
                 />
               </Grid>
               <Grid>
                 <Typo
-                  variant="caption"
+                  variant="body1"
                   component="div"
-                  text="Visa credit ...8845"
-                  width="144px"
+                  text={label12}
+                  width="164px"
                   className={classes.visaCredit}
                 />
               </Grid>
@@ -84,31 +118,32 @@ const index = ({ transaction }: GridProps) => {
             sx={{
               border: "1px dashed #B4B4CF",
               position: "absolute",
-              left: "3.5%",
+              left: "8%",
               width: "0px",
-              height: "32px",
+              height: "54px",
+              top: "22%",
             }}
           ></Grid>
           <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
-              <img src={payment} />
+              <img src={delivery} />
             </Grid>
             <Grid direction="row">
               <Grid>
                 <Typo
                   variant="caption"
                   component="div"
-                  text="Delivery fees"
+                  text={label21}
                   width="114px"
                   className={classes.paymentMethoddiv}
                 />
               </Grid>
               <Grid>
                 <Typo
-                  variant="caption"
+                  variant="body1"
                   component="div"
-                  text="0.001BTC"
-                  width="144px"
+                  text={label22}
+                  width="164px"
                   className={classes.visaCredit}
                 />
               </Grid>
@@ -120,33 +155,38 @@ const index = ({ transaction }: GridProps) => {
             sx={{
               border: "1px dashed #B4B4CF",
               position: "absolute",
-              left: "3.5%",
+              left: "8%",
               width: "0px",
-              height: "32px",
+              height: "58px",
+              top: "35%",
             }}
           >
             <Typo text="" component="div" width="10px" />
           </Grid>
           <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
-              <img src={payment} />
+              {transaction === "You are buying" ? (
+                <img src={deposit} />
+              ) : (
+                <img src={dollar} />
+              )}
             </Grid>
             <Grid direction="row">
               <Grid>
                 <Typo
                   variant="caption"
                   component="div"
-                  text="Deposit to"
+                  text={label31}
                   width="114px"
                   className={classes.paymentMethoddiv}
                 />
               </Grid>
               <Grid>
                 <Typo
-                  variant="caption"
+                  variant="body1"
                   component="div"
-                  text="Bitcoin wallet"
-                  width="144px"
+                  text={label32}
+                  width="164px"
                   className={classes.visaCredit}
                 />
               </Grid>
@@ -155,15 +195,27 @@ const index = ({ transaction }: GridProps) => {
         </Grid>
       </Grid>
 
-      <Grid>
-        <Grid container direction="row" xs={12}>
-          <Grid xs={4}>
+      <Grid
+        sx={{
+          width: "523px",
+          pt: 2,
+          position: "absolute",
+          left: "0%",
+          top: "48%",
+        }}
+      >
+        <Divider textAlign="left"></Divider>
+      </Grid>
+
+      <Grid sx={{ width: "480px", height: "250px" }}>
+        <Grid container direction="row" xs={12} alignItems="center">
+          <Grid xs={3}>
             <Typography component="div" width="100px" variant="overline">
               0.0234510 BTC
             </Typography>
           </Grid>
-          <Grid xs={5}>
-            <Divider textAlign="left">LEFT</Divider>
+          <Grid xs={6}>
+            <Divider textAlign="left"></Divider>
           </Grid>
           <Grid xs={3} alignItems="center">
             <Typography component="div" width="100px" variant="overline">
@@ -171,14 +223,14 @@ const index = ({ transaction }: GridProps) => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction="row" xs={12}>
-          <Grid xs={4}>
-            <Typography component="div" width="120px" variant="overline">
+        <Grid container direction="row" xs={12} alignItems="center">
+          <Grid xs={3}>
+            <Typography component="div" width="150px" variant="overline">
               transaction fee
             </Typography>
           </Grid>
-          <Grid xs={5}>
-            <Divider textAlign="left">LEFT</Divider>
+          <Grid xs={6}>
+            <Divider textAlign="left"></Divider>
           </Grid>
           <Grid xs={3} alignItems="center">
             <Typography component="div" width="100px" variant="overline">
@@ -186,14 +238,14 @@ const index = ({ transaction }: GridProps) => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction="row" xs={12}>
-          <Grid xs={4}>
+        <Grid container direction="row" xs={12} alignItems="center">
+          <Grid xs={1}>
             <Typography component="div" width="100px" variant="body1">
               Total
             </Typography>
           </Grid>
-          <Grid xs={5}>
-            <Divider textAlign="left">LEFT</Divider>
+          <Grid xs={8}>
+            <Divider textAlign="left"></Divider>
           </Grid>
           <Grid xs={3} alignItems="center">
             <Typography component="div" width="100px" variant="body1">
@@ -201,13 +253,42 @@ const index = ({ transaction }: GridProps) => {
             </Typography>
           </Grid>
         </Grid>
-
-        <Grid>
-          <Button variant="contained" sx={{ width: "449px", height: "40px" }}>
-            Buy Now
-          </Button>
-        </Grid>
       </Grid>
+
+      {button === "SELL NOW" ? (
+        <Button
+          variant="contained"
+          sx={{
+            width: "449px",
+            height: "40px",
+            position: "absolute",
+            top: "75%",
+            left: "5%",
+            backgroundColor: "orange",
+          }}
+          onClick={() => {
+            navigate("/paymentSuccessful");
+          }}
+        >
+          {button}
+        </Button>
+      ) : (
+        <Button
+          variant="contained"
+          sx={{
+            width: "449px",
+            height: "40px",
+            position: "absolute",
+            top: "75%",
+            left: "5%",
+          }}
+          onClick={() => {
+            navigate("/purchaseSuccessful");
+          }}
+        >
+          {button}
+        </Button>
+      )}
     </Grid>
   );
 };

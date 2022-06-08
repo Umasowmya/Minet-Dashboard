@@ -8,10 +8,10 @@ import Index from "./index";
 import explore from "../../../assets/explore.png";
 
 export default {
-  title: "organisms/CryptoGrid",
+  title: "organisms/paymentMethod",
   component: Index,
 } as ComponentMeta<typeof Index>;
 
 const Template: ComponentStory<typeof Index> = () => <Index />;
 
-export const bitcoin = Template.bind({});
+export const paymentMethod = Template.bind({});

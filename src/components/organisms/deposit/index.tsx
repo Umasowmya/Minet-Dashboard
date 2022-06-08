@@ -21,7 +21,6 @@ const index = () => {
         height: "190px",
         width: "710px",
         border: "1px solid #E8E8F7",
-        p: 2,
       }}
       spacing={5}
     >
@@ -30,7 +29,7 @@ const index = () => {
           variant="body1"
           component="div"
           className={classes.paymentMethod}
-          text="Payment Method"
+          text="Deposit"
         />
       </Grid>
 
@@ -79,7 +78,7 @@ const index = () => {
             <Typo
               component="div"
               width="240px"
-              text="Total Balance - $34,000"
+              text=""
               className={classes.totalBalance}
             />
           </Grid>
