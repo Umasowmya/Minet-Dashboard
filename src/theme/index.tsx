@@ -140,6 +140,12 @@ var customStyles = makeStyles({
     color: "#343446",
   },
 
+  scroll: {
+    height: "325x",
+    overflowY: "scroll",
+    width: "690px",
+    border: "1px solid #E8E8F7",
+  },
   coinGrid: {
     display: "flex",
     flexDirection: "column",

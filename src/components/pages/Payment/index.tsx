@@ -38,7 +38,7 @@ const index = () => {
               </Typography>
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "75px", top: "96px" }}>
+            <Grid sx={{ position: "absolute", left: "30px", top: "96px" }}>
               <CryptoGrid />
             </Grid>
 
@@ -63,7 +63,7 @@ const index = () => {
           <Grid
             sx={{
               position: "absolute",
-              left: "858px",
+              left: "890px",
               top: "103px",
             }}
           >

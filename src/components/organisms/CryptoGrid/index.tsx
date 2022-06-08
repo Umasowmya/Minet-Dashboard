@@ -69,27 +69,53 @@ const index = () => {
       title: "Polkadot",
       price: "$1642.39",
     },
+
+    {
+      image: image5,
+      title: "Cardono",
+      price: "$138.22",
+    },
+
+    {
+      image: image6,
+      title: "XRP",
+      price: "$76.73",
+    },
+
+    {
+      image: image7,
+      title: "Dogcoin",
+      price: "$21.37",
+    },
+
+    {
+      image: image8,
+      title: "Polkadot",
+      price: "$1642.39",
+    },
   ];
 
   return (
-    <Grid
-      container
-      direction="row"
-      spacing={2}
-      sx={{ width: "680px", height: "325px", border: "1px solid #E8E8F7" }}
-    >
-      {bitcoin.map((value, index) => {
-        return (
-          <Grid item xs={3}>
-            <CustomGrid
-              image={value.image}
-              title={value.title}
-              price={value.price}
-            />
-          </Grid>
-        );
-      })}
-    </Grid>
+    <div className={classes.scroll}>
+      <Grid
+        container
+        direction="row"
+        spacing={2}
+        sx={{ width: "630px", height: "280px" }}
+      >
+        {bitcoin.map((value, index) => {
+          return (
+            <Grid item xs={3}>
+              <CustomGrid
+                image={value.image}
+                title={value.title}
+                price={value.price}
+              />
+            </Grid>
+          );
+        })}
+      </Grid>
+    </div>
   );
 };
 

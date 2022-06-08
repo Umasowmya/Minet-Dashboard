@@ -17,28 +17,26 @@ const index = ({ image, title, price }: coinProps) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [flag, setFlag] = React.useState(true);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [border, setBorder] = React.useState("2px solid #FFFFF");
+
   const handleClick = () => {
     setFlag(!flag);
+    setBorder(flag ? "2px solid #0052FF" : "2px solid #FFFFF");
 
-    const border = () => {
-      var borderval;
-      flag
-        ? (borderval = "2px solid #0052FF")
-        : (borderval = "2px solid #FFFFF");
-      return borderval;
-    };
-
-    return border;
+    // const border = () => {
+    //   var borderval;
+    //   flag
+    //     ? (borderval = "2px solid #0052FF")
+    //     : (borderval = "2px solid #FFFFF");
+    //   return borderval;
+    // };
   };
-
-  var p;
 
   return (
     <Button
-      onClick={() => {
-        p = handleClick;
-      }}
-      sx={{ textTransform: "none", border: { p } }}
+      onClick={handleClick}
+      sx={{ textTransform: "none", border: { border } }}
     >
       <Grid container alignItems="center" direction="column">
         <Grid item>

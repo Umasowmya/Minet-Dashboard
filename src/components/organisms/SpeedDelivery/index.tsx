@@ -19,7 +19,7 @@ const index = () => {
       }}
       spacing={5}
     >
-      <Grid item container>
+      <Grid item container sx={{ position: "relative" }}>
         <Typo
           variant="body1"
           component="div"
@@ -34,9 +34,12 @@ const index = () => {
         direction="row"
         sx={{
           height: "90px",
-          width: "100%",
+          width: "95%",
           display: "flex",
           border: "1px solid #E8E8F7",
+          position: "absolute",
+          left: "1%",
+          top: "30%",
         }}
       >
         <Grid item sx={{ flexDirection: "flex-start" }}>
