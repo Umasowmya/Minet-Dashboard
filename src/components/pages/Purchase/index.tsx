@@ -3,8 +3,6 @@ import Template from "../../templates/index";
 import HorizontalHeader from "../../organisms/HeaderH/index";
 import VerticalHeader from "../../organisms/HeaderV/index";
 import { Grid, Typography } from "@mui/material";
-import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme";
 import Footer from "../../organisms/Footer/index";
 import CryptoGrid from "../../organisms/CryptoGrid/index";
 import ViewTransaction from "../../organisms/ViewTransaction/index";
@@ -13,7 +11,6 @@ import AmountDetails from "../../organisms/AmountDetails/index";
 import SpeedDelivery from "../../organisms/SpeedDelivery/index";
 
 const index = () => {
-  const classes = customStyles();
   return (
     <Template
       HorizontalHeader={<HorizontalHeader />}

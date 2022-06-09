@@ -1,7 +1,7 @@
 import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Buttons from "../../atoms/Buttons/Buttons";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";

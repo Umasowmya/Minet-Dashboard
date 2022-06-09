@@ -3,7 +3,7 @@ import React from "react";
 import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import Buttons from "../../atoms/Buttons/Buttons";
-import { KeyboardArrowUp, KeyboardArrowDown } from "@mui/icons-material";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 const index = () => {
   const classes = customStyles();

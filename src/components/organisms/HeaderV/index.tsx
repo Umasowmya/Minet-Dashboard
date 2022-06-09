@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { customStyles } from "../../../theme/index";
 import logo from "../../../assets/Vector.png";
@@ -8,18 +8,8 @@ import three from "../../../assets/3.png";
 import logo1 from "../../../assets/logo1.png";
 import four from "../../../assets/4.png";
 import five from "../../../assets/5.png";
-import Typo from "../../atoms/Typo/index";
-import { ClassNames } from "@emotion/react";
-import Buttons from "../../atoms/Buttons/Buttons";
-import Ava from "../../atoms/Avatar/index";
-import img from "../../../assets/avatar.png";
-import { KeyboardArrowUp, KeyboardArrowDown } from "@mui/icons-material";
-import explore from "../../../assets/explore.png";
 
 const index = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [clicked, handler] = React.useState(false);
-
   const classes = customStyles();
 
   return (

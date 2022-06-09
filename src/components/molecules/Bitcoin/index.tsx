@@ -2,8 +2,6 @@ import React from "react";
 import { Button, Grid } from "@mui/material";
 import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
-import { borderColor } from "@mui/system";
-import { BorderVertical } from "@mui/icons-material";
 import tick from "../../../assets/tick.png";
 
 interface coinProps {
