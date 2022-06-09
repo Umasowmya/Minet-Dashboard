@@ -4,7 +4,7 @@ import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import { borderColor } from "@mui/system";
 import { BorderVertical } from "@mui/icons-material";
-import explore from "../../../assets/crypto/explore.png";
+import tick from "../../../assets/tick.png";
 
 interface coinProps {
   image: string;
@@ -21,17 +21,13 @@ const index = ({ image, title, price }: coinProps) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [border, setBorder] = React.useState("2px solid #FFFFF");
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [tickval, setTickval] = React.useState("");
+
   const handleClick = () => {
     setFlag(!flag);
     setBorder(flag ? "2px solid #0052FF" : "2px solid #FFFFF");
-
-    // const border = () => {
-    //   var borderval;
-    //   flag
-    //     ? (borderval = "2px solid #0052FF")
-    //     : (borderval = "2px solid #FFFFF");
-    //   return borderval;
-    // };
+    setTickval(flag ? tick : "");
   };
 
   return (
@@ -39,9 +35,18 @@ const index = ({ image, title, price }: coinProps) => {
       onClick={handleClick}
       sx={{ textTransform: "none", border: { border } }}
     >
-      <Grid container alignItems="center" direction="column">
+      <Grid
+        container
+        alignItems="center"
+        direction="column"
+        sx={{ position: "relative" }}
+      >
+        <Grid sx={{ position: "absolute", right: "1%", top: "1%" }}>
+          <img src={tickval} alt="" />
+        </Grid>
+
         <Grid item>
-          <img src="binance.png" alt="explore" width="56px" height="56px" />
+          <img src={image} alt="explore" width="56px" height="56px" />
         </Grid>
         <Grid item>
           <Typo

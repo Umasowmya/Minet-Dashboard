@@ -35,7 +35,7 @@ const index = ({
           width: "1%",
           pt: 2,
           position: "absolute",
-          left: "75px",
+          left: "60px",
           top: "70px",
         }}
       >
@@ -45,10 +45,10 @@ const index = ({
       <Grid
         sx={{
           height: "1px",
-          width: "85%",
+          width: "93%",
           pt: 2,
           position: "absolute",
-          left: "93px",
+          left: "80px",
           top: "68px",
         }}
       >
@@ -58,7 +58,7 @@ const index = ({
       <Grid
         sx={{
           height: "1px",
-          width: "85%",
+          width: "93%",
           pt: 2,
           position: "absolute",
           left: "93px",

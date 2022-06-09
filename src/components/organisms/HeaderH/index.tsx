@@ -33,7 +33,11 @@ const index = () => {
       </Grid>
 
       <Grid item sx={{ position: "absolute", left: "1100px" }}>
-        <Buttons variant="contained" className={classes.sellButton}>
+        <Buttons
+          variant="contained"
+          className={classes.sellButton}
+          sx={{ backgroundColor: "#0052FF" }}
+        >
           {" "}
           BUY{" "}
         </Buttons>

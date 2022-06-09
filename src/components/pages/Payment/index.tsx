@@ -8,9 +8,9 @@ import { customStyles } from "../../../theme";
 import Footer from "../../organisms/Footer/index";
 import CryptoGrid from "../../organisms/CryptoGrid/index";
 import ViewTransaction from "../../organisms/ViewTransaction/index";
-import PaymentMethod from "../../organisms/Payment Method/index";
+import TotalBalance from "../../organisms/totalBalance/index";
 import AmountDetails from "../../organisms/AmountDetails/index";
-import SpeedDelivery from "../../organisms/SpeedDelivery/index";
+import Deposit from "../../organisms/deposit/index";
 
 const index = () => {
   const classes = customStyles();
@@ -20,14 +20,14 @@ const index = () => {
       VerticalHeader={<VerticalHeader />}
       Content={
         <>
-          <Grid sx={{ position: "absolute", left: "104px", top: "106px" }}>
+          <Grid sx={{ position: "absolute", left: "97px", top: "106px" }}>
             <Grid>
               <Typography variant="subtitle1" component="div">
                 Buy Crypto
               </Typography>
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "109px", top: "50px" }}>
+            <Grid sx={{ position: "absolute", left: "20px", top: "50px" }}>
               <Typography
                 variant="body1"
                 component="div"
@@ -38,15 +38,15 @@ const index = () => {
               </Typography>
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "30px", top: "96px" }}>
+            <Grid sx={{ position: "absolute", left: "15px", top: "96px" }}>
               <CryptoGrid />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "65px", top: "500px" }}>
-              <PaymentMethod />
+            <Grid sx={{ position: "absolute", left: "50px", top: "470px" }}>
+              <TotalBalance />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "65px", top: "700px" }}>
+            <Grid sx={{ position: "absolute", left: "50px", top: "700px" }}>
               <AmountDetails
                 buttonval="Sell max"
                 value="USD coin(cash)"
@@ -55,15 +55,15 @@ const index = () => {
               />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "65px", top: "1100px" }}>
-              <SpeedDelivery />
+            <Grid sx={{ position: "absolute", left: "50px", top: "1050px" }}>
+              <Deposit />
             </Grid>
           </Grid>
 
           <Grid
             sx={{
               position: "absolute",
-              left: "890px",
+              left: "825px",
               top: "103px",
             }}
           >

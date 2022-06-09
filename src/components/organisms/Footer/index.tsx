@@ -13,7 +13,11 @@ const index = () => {
       direction="row"
       spacing={5}
       className={classes.footer}
-      sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+      }}
     >
       <Grid item>
         <Typo
@@ -59,7 +63,7 @@ const index = () => {
           endIcon={<KeyboardArrowDown />}
           sx={{
             position: "absolute",
-            left: "77%",
+            left: "75%",
             borderColor: "#E8E8F7",
             color: "black",
           }}
