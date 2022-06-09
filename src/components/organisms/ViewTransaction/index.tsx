@@ -281,6 +281,7 @@ const index = ({
             position: "absolute",
             top: "75%",
             left: "5%",
+            backgroundColor: "#0052FF",
           }}
           onClick={() => {
             navigate("/purchaseSuccessful");

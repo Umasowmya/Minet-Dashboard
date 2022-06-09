@@ -289,6 +289,10 @@ var customStyles = makeStyles({
     lineHeight: "22px",
     color: "#343446",
   },
+
+  speedButton: {
+    width: "50px",
+  },
 });
 
 export { customStyles };

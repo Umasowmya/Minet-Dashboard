@@ -36,7 +36,7 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        posiotn: "relative",
+        position: "relative",
       }}
       spacing={5}
     >
@@ -55,36 +55,44 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         sx={{
           display: "flex",
           alignItems: "center",
-          p: 1,
           width: "663px",
-          border: "1px solid #E8E8F7",
         }}
         spacing={3}
       >
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.amountDetailsPrice}
-            text={label1}
-            width="300px"
-          />
-        </Grid>
+        <Grid
+          sx={{
+            border: "1px solid #E8E8F7",
+            display: "flex",
+            alignItems: "center",
+            width: "663px",
+            p: 1,
+          }}
+        >
+          <Grid item container>
+            <Typo
+              component="div"
+              className={classes.amountDetailsPrice}
+              text={label1}
+              width="300px"
+            />
+          </Grid>
 
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.paymentMethod}
-            text=""
-            width="180px"
-          />
-        </Grid>
+          <Grid item container>
+            <Typo
+              component="div"
+              className={classes.paymentMethod}
+              text=""
+              width="180px"
+            />
+          </Grid>
 
-        <Grid item container>
-          <Buttons
-            variant="outlined"
-            children={buttonval}
-            sx={{ width: "120px", height: "40px" }}
-          />
+          <Grid item container>
+            <Buttons
+              variant="outlined"
+              children={buttonval}
+              sx={{ width: "120px", height: "40px" }}
+            />
+          </Grid>
         </Grid>
       </Grid>
 
@@ -112,48 +120,62 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         direction="row"
         sx={{
           display: "flex",
-          p: 1,
+          p: 2,
           width: "663px",
           alignItems: "center",
-          border: "1px solid #E8E8F7",
+
+          position: "relative",
         }}
         spacing={3}
       >
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.amountDetailsPrice}
-            text={label2}
-            width="250px"
-          />
+        <Grid
+          sx={{
+            border: "1px solid #E8E8F7",
+            display: "flex",
+            p: 1,
+            alignItems: "center",
+            position: "absolute",
+            top: "0px",
+            width: "93%",
+            height: "80%",
+          }}
+        >
+          <Grid item container>
+            <Typo
+              component="div"
+              className={classes.amountDetailsPrice}
+              text={label2}
+              width="250px"
+            />
+          </Grid>
+
+          <Grid item container>
+            <Typo
+              component="div"
+              className={classes.paymentMethod}
+              text=""
+              width="225px"
+            />
+          </Grid>
+
+          <Grid item container>
+            <Typo
+              component="div"
+              className={classes.amountDetailsPrice}
+              text={value}
+              width="120px"
+            />
+          </Grid>
         </Grid>
 
-        <Grid item container>
+        <Grid item container sx={{ height: "5px" }}>
           <Typo
             component="div"
             className={classes.paymentMethod}
             text=""
-            width="225px"
+            width="50px"
           />
         </Grid>
-
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.amountDetailsPrice}
-            text={value}
-            width="120px"
-          />
-        </Grid>
-      </Grid>
-
-      <Grid item container sx={{ height: "5px" }}>
-        <Typo
-          component="div"
-          className={classes.paymentMethod}
-          text=""
-          width="50px"
-        />
       </Grid>
     </Grid>
   );

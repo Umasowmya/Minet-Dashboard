@@ -40,65 +40,77 @@ const index = () => {
           height: "90px",
           width: "100%",
           display: "flex",
-          border: "1px solid #E8E8F7",
+          position: "relative",
         }}
       >
         <Grid
-          item
           sx={{
-            flexDirection: "flex-start",
-            background: `url(${dollar})`,
-            backgroundSize: "22px 22px",
-            backgroundRepeat: "no-repeat",
+            height: "80%",
+            width: "90%",
+            display: "flex",
+            border: "1px solid #E8E8F7",
+            position: "absolute",
+            top: "0px",
+            p: 2,
           }}
         >
-          <img src={circle} alt="logo" width="25px" height="25px" />
-        </Grid>
+          <Grid
+            item
+            sx={{
+              flexDirection: "flex-start",
+              background: `url(${dollar})`,
+              backgroundSize: "22px 22px",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <img src={circle} alt="logo" width="25px" height="25px" />
+          </Grid>
 
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.paymentMethod}
-            text=""
-            width="30px"
-          />
-        </Grid>
-
-        <Grid item direction="column">
-          <Grid item sm={1}>
+          <Grid item container>
             <Typo
               component="div"
-              width="120px"
-              text="USD Coin cash"
-              className={classes.currency}
+              className={classes.paymentMethod}
+              text=""
+              width="30px"
             />
           </Grid>
 
-          <Grid item sm={1}>
+          <Grid item direction="column">
+            <Grid item sm={1}>
+              <Typo
+                component="div"
+                width="120px"
+                text="USD Coin cash"
+                className={classes.currency}
+              />
+            </Grid>
+
+            <Grid item sm={1}>
+              <Typo
+                component="div"
+                width="240px"
+                text="Total Balance - $34,000"
+                className={classes.totalBalance}
+              />
+            </Grid>
+          </Grid>
+
+          <Grid item container>
             <Typo
               component="div"
-              width="240px"
-              text="Total Balance - $34,000"
-              className={classes.totalBalance}
+              className={classes.paymentMethod}
+              text=""
+              width="220px"
             />
           </Grid>
-        </Grid>
 
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.paymentMethod}
-            text=""
-            width="220px"
-          />
-        </Grid>
-
-        <Grid item container>
-          <Typo
-            component="div"
-            className={classes.paymentMethod}
-            text="Default"
-          />
+          <Grid item container>
+            <Typo
+              component="div"
+              className={classes.paymentMethod}
+              text="Default"
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
