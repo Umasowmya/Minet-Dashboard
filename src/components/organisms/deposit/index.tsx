@@ -5,11 +5,6 @@ import { customStyles } from "../../../theme/index";
 import dollar from "../../../assets/dollar.png";
 import circle from "../../../assets/circle.png";
 
-interface Props {
-  title: string;
-  logo: string;
-}
-
 const index = () => {
   const classes = customStyles();
   return (

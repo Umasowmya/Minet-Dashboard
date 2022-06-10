@@ -1,6 +1,5 @@
 import React from "react";
 import { customStyles } from "../../../theme/index";
-import Typo from "../../atoms/Typo/index";
 import { Grid } from "@mui/material";
 import CustomGrid from "../../molecules/Bitcoin/index";
 import axios from "axios";

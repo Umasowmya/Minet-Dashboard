@@ -87,9 +87,9 @@ const index = ({
           <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
               {transaction === "You are buying" ? (
-                <img src={payment} />
+                <img src={payment} alt="payment" />
               ) : (
-                <img src={payingThough} />
+                <img src={payingThough} alt="paying  through" />
               )}
             </Grid>
             <Grid direction="row">
@@ -126,7 +126,7 @@ const index = ({
           ></Grid>
           <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
-              <img src={delivery} />
+              <img src={delivery} alt="delivery" />
             </Grid>
             <Grid direction="row">
               <Grid>
@@ -166,9 +166,9 @@ const index = ({
           <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
               {transaction === "You are buying" ? (
-                <img src={deposit} />
+                <img src={deposit} alt="deposit" />
               ) : (
-                <img src={dollar} />
+                <img src={dollar} alt="dollar" />
               )}
             </Grid>
             <Grid direction="row">

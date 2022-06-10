@@ -1,6 +1,5 @@
 import React from "react";
 import { Divider, Grid } from "@mui/material";
-import { customStyles } from "../../theme";
 
 interface Props {
   VerticalHeader: React.ReactNode;
@@ -15,7 +14,6 @@ const index = ({
   Content,
   Footer,
 }: Props) => {
-  const classes = customStyles();
   return (
     <>
       <Grid container direction="column">
