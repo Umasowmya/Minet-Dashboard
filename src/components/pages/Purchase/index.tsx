@@ -27,8 +27,12 @@ const index = () => {
             <Grid
               sx={{
                 position: "absolute",
-                left: "20px",
+                left: "17px",
                 top: "50px",
+                border: "1px solid #E8E8F7",
+                width: "705px",
+                height: "350px",
+                p: 3,
               }}
             >
               <Typography
@@ -40,15 +44,15 @@ const index = () => {
                 Choose crypto
               </Typography>
             </Grid>
-            <Grid sx={{ position: "absolute", left: "20px", top: "96px" }}>
+            <Grid sx={{ position: "absolute", left: "20px", top: "120px" }}>
               <CryptoGrid />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "55px", top: "420px" }}>
+            <Grid sx={{ position: "absolute", left: "55px", top: "450px" }}>
               <PaymentMethod />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "55px", top: "630px" }}>
+            <Grid sx={{ position: "absolute", left: "55px", top: "660px" }}>
               <AmountDetails
                 buttonval="Buy max"
                 value="BTC"
@@ -57,7 +61,7 @@ const index = () => {
               />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "55px", top: "950px" }}>
+            <Grid sx={{ position: "absolute", left: "55px", top: "980px" }}>
               <SpeedDelivery />
             </Grid>
           </Grid>
@@ -65,7 +69,7 @@ const index = () => {
           <Grid
             sx={{
               position: "absolute",
-              left: "833px",
+              left: "830px",
               top: "103px",
             }}
           >

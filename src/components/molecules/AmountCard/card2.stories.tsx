@@ -4,15 +4,14 @@ import React from "react";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Index from "./index";
-import explore from "../../../assets/explore.png";
+import Index from "./card2";
 
 export default {
-  title: "molecules/bitcoin",
+  title: "molecules/card2",
   component: Index,
 } as ComponentMeta<typeof Index>;
 
 const Template: ComponentStory<typeof Index> = (args) => <Index {...args} />;
 
-export const bitcoin = Template.bind({});
-bitcoin.args = { image: explore, title: "Bitcoin", price: "$3,406,069.54" };
+export const AmountCard2 = Template.bind({});
+AmountCard2.args = { label2: "USD coin(cash)", value: "$34,000.00" };

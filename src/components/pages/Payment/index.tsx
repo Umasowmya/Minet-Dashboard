@@ -17,14 +17,31 @@ const index = () => {
       VerticalHeader={<VerticalHeader />}
       Content={
         <>
-          <Grid sx={{ position: "absolute", left: "97px", top: "106px" }}>
+          <Grid
+            sx={{
+              position: "absolute",
+              left: "96px",
+              top: "106px",
+              width: "800px",
+            }}
+          >
             <Grid>
               <Typography variant="subtitle1" component="div">
-                Buy Crypto
+                Sell Crypto
               </Typography>
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "20px", top: "50px" }}>
+            <Grid
+              sx={{
+                position: "absolute",
+                left: "17px",
+                top: "50px",
+                border: "1px solid #E8E8F7",
+                width: "705px",
+                height: "350px",
+                p: 3,
+              }}
+            >
               <Typography
                 variant="body1"
                 component="div"
@@ -35,15 +52,15 @@ const index = () => {
               </Typography>
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "15px", top: "96px" }}>
+            <Grid sx={{ position: "absolute", left: "20px", top: "120px" }}>
               <CryptoGrid />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "50px", top: "470px" }}>
+            <Grid sx={{ position: "absolute", left: "55px", top: "450px" }}>
               <TotalBalance />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "50px", top: "700px" }}>
+            <Grid sx={{ position: "absolute", left: "55px", top: "660px" }}>
               <AmountDetails
                 buttonval="Sell max"
                 value="USD coin(cash)"
@@ -52,7 +69,7 @@ const index = () => {
               />
             </Grid>
 
-            <Grid sx={{ position: "absolute", left: "50px", top: "1050px" }}>
+            <Grid sx={{ position: "absolute", left: "60px", top: "990px" }}>
               <Deposit />
             </Grid>
           </Grid>
@@ -60,7 +77,7 @@ const index = () => {
           <Grid
             sx={{
               position: "absolute",
-              left: "825px",
+              left: "840px",
               top: "103px",
             }}
           >

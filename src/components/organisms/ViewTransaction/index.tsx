@@ -5,7 +5,7 @@ import { customStyles } from "../../../theme/index";
 import payment from "../../../assets/payment.png";
 import delivery from "../../../assets/delivery.png";
 import deposit from "../../../assets/deposit.png";
-import dollar from "../../../assets/dollar.png";
+import rupee from "../../../assets/rupee.png";
 import payingThough from "../../../assets/payingThrough.png";
 import { useNavigate } from "react-router-dom";
 
@@ -168,7 +168,7 @@ const index = ({
               {transaction === "You are buying" ? (
                 <img src={deposit} alt="deposit" />
               ) : (
-                <img src={dollar} alt="dollar" />
+                <img src={rupee} alt="rupee" />
               )}
             </Grid>
             <Grid direction="row">

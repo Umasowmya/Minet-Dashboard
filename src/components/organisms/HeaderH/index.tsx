@@ -13,8 +13,8 @@ const index = () => {
   const classes = customStyles();
 
   return (
-    <Grid item container sx={{ border: "1px solid #E8E8F7" }}>
-      <Grid item sx={{ position: "absolute", left: "100px" }}>
+    <Grid item container sx={{}}>
+      <Grid item sx={{ position: "absolute", left: "100px", top: "10px" }}>
         <Typo text="Checkout" component="div" className={classes.checkout} />
       </Grid>
 
@@ -22,7 +22,7 @@ const index = () => {
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ backgroundColor: "orange" }}
+          sx={{ backgroundColor: "#ffa74f" }}
         >
           {" "}
           SELL{" "}

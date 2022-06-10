@@ -26,11 +26,14 @@ const index = () => {
         container
         direction="row"
         spacing={2}
-        sx={{ width: "630px", height: "280px" }}
+        sx={{
+          width: "620px",
+          height: "280px",
+        }}
       >
         {bitcoin.map((value: bitcoinProps) => {
           return (
-            <Grid item xs={3}>
+            <Grid item>
               <CustomGrid
                 image={value.image}
                 title={value.title}

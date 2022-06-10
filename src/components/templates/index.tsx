@@ -29,7 +29,7 @@ const index = ({
 
       <Grid
         sx={{
-          height: "1290px",
+          height: "1350px",
           width: "1%",
           pt: 2,
           position: "absolute",
@@ -43,7 +43,7 @@ const index = ({
       <Grid
         sx={{
           height: "1px",
-          width: "93%",
+          width: "95%",
           pt: 2,
           position: "absolute",
           left: "80px",
@@ -56,11 +56,11 @@ const index = ({
       <Grid
         sx={{
           height: "1px",
-          width: "93%",
+          width: "95%",
           pt: 2,
           position: "absolute",
-          left: "93px",
-          top: "1350px",
+          left: "78px",
+          top: "1400px",
         }}
       >
         <Divider textAlign="left"></Divider>
