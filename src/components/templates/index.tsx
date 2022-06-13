@@ -16,7 +16,7 @@ const index = ({
 }: Props) => {
   return (
     <>
-      <Grid container direction="column">
+      <Grid container direction="column" sx={{ width: "90%" }}>
         <Grid item sx={{ position: "absolute", left: "2%" }}>
           {VerticalHeader}
         </Grid>

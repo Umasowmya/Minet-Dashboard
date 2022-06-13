@@ -2,13 +2,14 @@ import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
 import { Grid } from "@mui/material";
+import Buttons from "../../atoms/Buttons/Buttons";
 
 interface Props {
-  label2: string;
-  value: string;
+  price: string;
+  buttonval: string;
 }
 
-const index2 = ({ label2, value }: Props) => {
+const index1 = ({ price, buttonval }: Props) => {
   const classes = customStyles();
 
   return (
@@ -16,20 +17,17 @@ const index2 = ({ label2, value }: Props) => {
       sx={{
         border: "1px solid #E8E8F7",
         display: "flex",
-        p: 1,
         alignItems: "center",
-        position: "absolute",
-        top: "0px",
-        width: "93%",
-        height: "80%",
+        width: "663px",
+        p: 1,
       }}
     >
       <Grid item container>
         <Typo
           component="div"
           className={classes.amountDetailsPrice}
-          text={label2}
-          width="250px"
+          text={price}
+          width="300px"
         />
       </Grid>
 
@@ -38,20 +36,19 @@ const index2 = ({ label2, value }: Props) => {
           component="div"
           className={classes.paymentMethod}
           text=""
-          width="225px"
+          width="180px"
         />
       </Grid>
 
       <Grid item container>
-        <Typo
-          component="div"
-          className={classes.amountDetailsPrice}
-          text={value}
-          width="120px"
+        <Buttons
+          variant="outlined"
+          children={buttonval}
+          sx={{ width: "120px", height: "40px" }}
         />
       </Grid>
     </Grid>
   );
 };
 
-export default index2;
+export default index1;

@@ -28,10 +28,10 @@ declare module "@mui/material/Typography" {
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: "#0052ff",
+      main: "#00FF00",
     },
     secondary: {
-      main: "#ffa74f",
+      main: "#00FF00",
     },
   },
   typography: {
@@ -112,7 +112,7 @@ var customStyles = makeStyles({
   sellButton: {
     width: "120px",
     height: "42px",
-    background: "#FFA74F",
+    // background: "#FFA74F",
     borderRadius: "4px",
     alignItems: "center",
   },

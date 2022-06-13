@@ -18,6 +18,6 @@ export const AmountDetails = Template.bind({});
 AmountDetails.args = {
   buttonval: "Sell max",
   value: "USD coin(cash)",
-  label1: "0.0234510 ",
-  label2: "$34,000.00",
+  price: "0.0234510 ",
+  quantity: "$34,000.00",
 };

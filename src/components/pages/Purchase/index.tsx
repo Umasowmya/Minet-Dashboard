@@ -56,8 +56,8 @@ const index = () => {
               <AmountDetails
                 buttonval="Buy max"
                 value="BTC"
-                label2="0.0234510 "
-                label1="$34,000.00"
+                quantity="0.0234510 "
+                price="$34,000.00"
               />
             </Grid>
 

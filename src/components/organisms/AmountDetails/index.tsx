@@ -4,17 +4,17 @@ import { customStyles } from "../../../theme/index";
 import { Grid } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
-import Card1 from "../../molecules/AmountCard/card1";
-import Card2 from "../../molecules/AmountCard/card2";
+import Card1 from "../../molecules/AmountCard/ButtonCard";
+import Card2 from "../../molecules/AmountCard/TypoCard";
 
 interface amountProps {
   buttonval: string;
   value: string;
-  label1: string;
-  label2: string;
+  price: string;
+  quantity: string;
 }
 
-const index = ({ buttonval, value, label1, label2 }: amountProps) => {
+const index = ({ buttonval, value, price, quantity }: amountProps) => {
   function valuetext(value: number) {
     return `1BTC=$${value}`;
   }
@@ -60,7 +60,7 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         }}
         spacing={3}
       >
-        <Card1 buttonval={buttonval} label1={label1} />
+        <Card1 buttonval={buttonval} price={price} />
       </Grid>
 
       <Stack
@@ -95,7 +95,7 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         }}
         spacing={3}
       >
-        <Card2 value={value} label2={label2} />
+        <Card2 value={value} quantity={quantity} />
 
         <Grid item container sx={{ height: "5px" }}>
           <Typo

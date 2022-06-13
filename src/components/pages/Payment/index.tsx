@@ -22,7 +22,6 @@ const index = () => {
               position: "absolute",
               left: "96px",
               top: "106px",
-              width: "800px",
             }}
           >
             <Grid>
@@ -64,8 +63,8 @@ const index = () => {
               <AmountDetails
                 buttonval="Sell max"
                 value="USD coin(cash)"
-                label1="0.0234510 "
-                label2="$34,000.00"
+                price="0.0234510 "
+                quantity="$34,000.00"
               />
             </Grid>
 

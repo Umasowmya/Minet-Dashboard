@@ -4,14 +4,15 @@ import React from "react";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Index from "./card2";
+import Index from "./ButtonCard";
+import img from "../../../assets/avatar.png";
 
 export default {
-  title: "molecules/card2",
+  title: "molecules/card1",
   component: Index,
 } as ComponentMeta<typeof Index>;
 
 const Template: ComponentStory<typeof Index> = (args) => <Index {...args} />;
 
-export const AmountCard2 = Template.bind({});
-AmountCard2.args = { label2: "USD coin(cash)", value: "$34,000.00" };
+export const AmountCard = Template.bind({});
+AmountCard.args = { buttonval: "Sell max", price: "0.0234510 " };

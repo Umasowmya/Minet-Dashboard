@@ -22,35 +22,13 @@ const index = () => {
   const [fee, setFee] = React.useState("Transaction fees:0.001 BTC");
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [backgroundColorval, setBackgroundColorval] = React.useState("#FFFFFF");
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [background1, setBackground1] = React.useState("#FFFFFF");
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [background2, setBackground2] = React.useState("#FFFFFF");
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [background3, setBackground3] = React.useState("#FFFFFF");
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [flag1, setFlag1] = React.useState(0);
 
   const handleClick = () => {
     setFlag(!flag);
     setdisplay(flag ? "flex" : "none");
-
-    console.log(display);
   };
 
-  const handleClick1 = () => {
-    setBackgroundColorval(flag1 === 0 ? "#F2F2F7" : "#FFFFFF");
-
-    setBackground1(flag1 === 1 ? "#F2F2F7" : "#FFFFFF");
-    setBackground2(flag1 === 2 ? "#F2F2F7" : "#FFFFFF");
-
-    setBackground3(flag1 === 3 ? "#F2F2F7" : "#FFFFFF");
-  };
   return (
     <Grid
       item
@@ -149,7 +127,6 @@ const index = () => {
             setSpeed("Instant: 2-5 minutes");
             setFee("Transaction fees:0.001 BTC");
             setFlag1(0);
-            handleClick1();
           }}
           style={{
             cursor: "pointer",
@@ -161,7 +138,7 @@ const index = () => {
               width: "95%",
               display: { display },
               border: "1px solid #E8E8F7",
-              backgroundColor: backgroundColorval,
+              backgroundColor: flag1 === 0 ? "#F2F2F7" : "#FFFFFF",
               position: "absolute",
               top: "100%",
               p: 3,
@@ -199,7 +176,6 @@ const index = () => {
             setSpeed("Faster : 4 hours");
             setFee("Transaction fees:0.0001 BTC");
             setFlag1(1);
-            handleClick1();
           }}
           style={{
             cursor: "pointer",
@@ -213,7 +189,7 @@ const index = () => {
               border: "1px solid #E8E8F7",
               position: "absolute",
               top: "160%",
-              backgroundColor: background1,
+              backgroundColor: flag1 === 1 ? "#F2F2F7" : "#FFFFFF",
               p: 3,
             }}
             xs={12}
@@ -248,7 +224,6 @@ const index = () => {
             setSpeed("Fast : 120 hours");
             setFee("Transaction fees:0.00001 BTC");
             setFlag1(2);
-            handleClick1();
           }}
           style={{
             cursor: "pointer",
@@ -261,7 +236,7 @@ const index = () => {
               display: { display },
               border: "1px solid #E8E8F7",
               position: "absolute",
-              backgroundColor: background2,
+              backgroundColor: flag1 === 2 ? "#F2F2F7" : "#FFFFFF",
               top: "224%",
               p: 3,
             }}
@@ -298,7 +273,6 @@ const index = () => {
             setSpeed("None");
             setFee("None");
             setFlag1(3);
-            handleClick1();
           }}
           style={{
             cursor: "pointer",
@@ -311,7 +285,7 @@ const index = () => {
               display: { display },
               border: "1px solid #E8E8F7",
               position: "absolute",
-              backgroundColor: background3,
+              backgroundColor: flag1 === 3 ? "#F2F2F7" : "#FFFFFF",
               top: "289%",
               p: 3,
             }}
