@@ -1,9 +1,22 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
 import rupee from "../../../assets/rupee.png";
 import ImageWithTypo from "../../molecules/ImageWithTypo/index";
+import { makeStyles } from "@material-ui/core";
+
+var customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+});
 
 const index = () => {
   const classes = customStyles();

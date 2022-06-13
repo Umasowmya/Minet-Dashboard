@@ -1,10 +1,50 @@
-import { backdropClasses, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
 import delivery from "../../../assets/delivery.png";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Button } from "@mui/material";
+
+import { makeStyles } from "@material-ui/core";
+
+var customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+
+  currency: {
+    width: "250px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "14px",
+    lineHeight: "16px",
+    color: "#343446",
+  },
+
+  totalBalance: {
+    width: "251px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "20px",
+    lineHeight: "28px",
+    color: "#7D7D89",
+  },
+
+  speedButton: {
+    width: "50px",
+  },
+});
 
 const index = () => {
   const classes = customStyles();

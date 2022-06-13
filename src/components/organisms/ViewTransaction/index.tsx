@@ -1,13 +1,51 @@
 import { Button, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
 import payment from "../../../assets/payment.png";
 import delivery from "../../../assets/delivery.png";
 import deposit from "../../../assets/deposit.png";
 import rupee from "../../../assets/rupee.png";
 import payingThough from "../../../assets/payingThrough.png";
 import { useNavigate } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
+
+var customStyles = makeStyles({
+  transaction: {
+    width: "101px",
+    height: "16px",
+    fontfamily: "Graphik",
+    fontstyle: "normal",
+    fontweight: 500,
+    fontsize: "14px",
+    lineHeight: "16px",
+    color: "#7D7D89",
+  },
+
+  price: {
+    width: "171px",
+    height: "34px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "24px",
+    lineHeight: "34px",
+    color: "#343446",
+  },
+
+  paymentMethoddiv: {
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "16px",
+    color: "#7D7D89",
+  },
+
+  visaCredit: {
+    fontWeight: 600,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+});
 
 interface GridProps {
   transaction: string;
@@ -30,10 +68,10 @@ const index = ({
   label32,
   button,
 }: GridProps) => {
-  const classes = customStyles();
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigate = useNavigate();
+
+  const classes = customStyles();
 
   return (
     <Grid

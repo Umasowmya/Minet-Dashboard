@@ -1,11 +1,11 @@
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
-import Card1 from "../../molecules/AmountCard/ButtonCard";
-import Card2 from "../../molecules/AmountCard/TypoCard";
+import Card from "../../molecules/AmountCard/ButtonCard";
+import { makeStyles } from "@material-ui/core";
+import Buttons from "../../atoms/Buttons/Buttons";
 
 interface amountProps {
   buttonval: string;
@@ -13,6 +13,30 @@ interface amountProps {
   price: string;
   quantity: string;
 }
+
+var customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+
+  amountDetailsPrice: {
+    width: "118px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "18px",
+    lineHeight: "28px",
+    color: "#343446",
+  },
+});
 
 const index = ({ buttonval, value, price, quantity }: amountProps) => {
   function valuetext(value: number) {
@@ -60,7 +84,10 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
         }}
         spacing={3}
       >
-        <Card1 buttonval={buttonval} price={price} />
+        <Card
+          Atom={<Button variant="outlined">{buttonval}</Button>}
+          label={price}
+        />
       </Grid>
 
       <Stack
@@ -90,12 +117,30 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
           p: 2,
           width: "663px",
           alignItems: "center",
-
           position: "relative",
         }}
         spacing={3}
       >
-        <Card2 value={value} quantity={quantity} />
+        <Grid
+          sx={{
+            position: "absolute",
+            top: "0px",
+            width: "90%",
+            height: "80%",
+          }}
+        >
+          <Card
+            Atom={
+              <Typo
+                component="div"
+                className={classes.amountDetailsPrice}
+                text={value}
+                width="120px"
+              />
+            }
+            label={quantity}
+          />
+        </Grid>
 
         <Grid item container sx={{ height: "5px" }}>
           <Typo

@@ -1,14 +1,33 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Buttons from "../../atoms/Buttons/Buttons";
-import Ava from "../../atoms/Avatar/index";
+import Ava from "../../atoms/Avatar/Ava";
 import Typo from "../../atoms/Typo/index";
 import { KeyboardArrowDown } from "@mui/icons-material";
+import { makeStyles } from "@material-ui/core";
 
 import img from "../../../assets/avatar.png";
 
-import { customStyles } from "../../../theme/index";
+var customStyles = makeStyles({
+  checkout: {
+    width: "109px",
+    height: "34px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "24px",
+    lineHeight: "34px",
+    color: "#343446",
+  },
 
+  sellButton: {
+    width: "120px",
+    height: "42px",
+    // background: "#FFA74F",
+    borderRadius: "4px",
+    alignItems: "center",
+  },
+});
 const index = () => {
   const classes = customStyles();
 

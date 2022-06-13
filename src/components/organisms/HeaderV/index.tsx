@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { customStyles } from "../../../theme/index";
 import logo from "../../../assets/Vector.png";
 import one from "../../../assets/1.png";
 import two from "../../../assets/2.png";
@@ -8,6 +7,20 @@ import three from "../../../assets/3.png";
 import logo1 from "../../../assets/logo1.png";
 import four from "../../../assets/4.png";
 import five from "../../../assets/5.png";
+import { makeStyles } from "@material-ui/core";
+
+var customStyles = makeStyles({
+  verticalHeader: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    position: "absolute",
+    width: "80px",
+    height: "728px",
+    left: "25px",
+    top: "30px",
+  },
+});
 
 const index = () => {
   const classes = customStyles();

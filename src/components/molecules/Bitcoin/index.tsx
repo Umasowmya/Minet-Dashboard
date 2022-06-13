@@ -1,14 +1,23 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
-import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import tick from "../../../assets/tick.png";
+import { makeStyles } from "@material-ui/core";
 
 interface coinProps {
   image: string;
   title: string;
   price: string;
 }
+
+var customStyles = makeStyles({
+  coinName: {
+    width: "55px",
+    height: "22px",
+    lineHeight: "22px",
+    color: "#4B4B60",
+  },
+});
 
 const index = ({ image, title, price }: coinProps) => {
   const classes = customStyles();

@@ -2,14 +2,13 @@ import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
 import { Grid } from "@mui/material";
-import Buttons from "../../atoms/Buttons/Buttons";
 
 interface Props {
-  price: string;
-  buttonval: string;
+  label: string;
+  Atom: React.ReactNode;
 }
 
-const index1 = ({ price, buttonval }: Props) => {
+const index1 = ({ label, Atom }: Props) => {
   const classes = customStyles();
 
   return (
@@ -18,7 +17,7 @@ const index1 = ({ price, buttonval }: Props) => {
         border: "1px solid #E8E8F7",
         display: "flex",
         alignItems: "center",
-        width: "663px",
+        width: "623px",
         p: 1,
       }}
     >
@@ -26,7 +25,7 @@ const index1 = ({ price, buttonval }: Props) => {
         <Typo
           component="div"
           className={classes.amountDetailsPrice}
-          text={price}
+          text={label}
           width="300px"
         />
       </Grid>
@@ -41,11 +40,7 @@ const index1 = ({ price, buttonval }: Props) => {
       </Grid>
 
       <Grid item container>
-        <Buttons
-          variant="outlined"
-          children={buttonval}
-          sx={{ width: "120px", height: "40px" }}
-        />
+        {Atom}
       </Grid>
     </Grid>
   );

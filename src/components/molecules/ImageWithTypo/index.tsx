@@ -1,14 +1,48 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
-import explore from "../../../assets/explore.png";
+import { makeStyles } from "@material-ui/core";
 
 interface Props {
   image: string;
   value1: string;
   value2: string;
 }
+
+var customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+
+  currency: {
+    width: "250px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "14px",
+    lineHeight: "16px",
+    color: "#343446",
+  },
+
+  amountDetailsPrice: {
+    width: "118px",
+    height: "28px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "18px",
+    lineHeight: "28px",
+    color: "#343446",
+  },
+});
 const index = ({ image, value1, value2 }: Props) => {
   const classes = customStyles();
 

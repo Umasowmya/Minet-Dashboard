@@ -1,10 +1,39 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import Buttons from "../../atoms/Buttons/Buttons";
 import { KeyboardArrowDown } from "@mui/icons-material";
+import { makeStyles } from "@material-ui/core";
 
+var customStyles = makeStyles({
+  footerElement: {
+    width: "83px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#0052FF",
+  },
+
+  footerElement2: {
+    width: "83px",
+    height: "22px",
+    fontFamily: "Graphik",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "22px",
+    color: "#343446",
+  },
+
+  footer: {
+    position: "absolute",
+    top: "1450px",
+    left: "80px",
+  },
+});
 const index = () => {
   const classes = customStyles();
   return (

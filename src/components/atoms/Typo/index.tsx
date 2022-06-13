@@ -19,7 +19,7 @@ interface CustomTypoProps {
   component: React.ElementType;
 }
 
-const index = (props: CustomTypoProps) => {
+const Typo = (props: CustomTypoProps) => {
   return (
     <Typography
       variant={props.variant}
@@ -32,4 +32,4 @@ const index = (props: CustomTypoProps) => {
   );
 };
 
-export default index;
+export default Typo;
