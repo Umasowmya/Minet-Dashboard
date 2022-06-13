@@ -15,7 +15,7 @@ const index = () => {
           text="Purchase is completed, please check your
                 balance in your crypto wallet"
           button1="BUY NOW"
-          button2="GOTO USD"
+          button2="GOTO USD COIN"
         />
       }
       Footer={<Footer />}

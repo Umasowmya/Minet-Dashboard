@@ -28,10 +28,10 @@ declare module "@mui/material/Typography" {
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: "#FFA74F",
+      main: "#00FF00",
     },
     secondary: {
-      main: "#116BE9",
+      main: "#00FF00",
     },
   },
   typography: {
@@ -112,7 +112,7 @@ var customStyles = makeStyles({
   sellButton: {
     width: "120px",
     height: "42px",
-    background: "#FFA74F",
+    // background: "#FFA74F",
     borderRadius: "4px",
     alignItems: "center",
   },
@@ -143,9 +143,23 @@ var customStyles = makeStyles({
   scroll: {
     height: "325x",
     overflowY: "scroll",
-    width: "690px",
-    border: "1px solid #E8E8F7",
+    width: "650px",
+
+    "&::-webkit-scrollbar": {
+      width: "5px",
+    },
+
+    "&::-webkit-scrollbar-track": {
+      boxShadow: "inset 0 0 5px #FFFFFF",
+      borderRadius: "10px",
+    },
+
+    "&::-webkit-scrollbar-thumb": {
+      background: "#B4B4CF",
+      borderRadius: "10px",
+    },
   },
+
   coinGrid: {
     display: "flex",
     flexDirection: "column",
@@ -184,7 +198,7 @@ var customStyles = makeStyles({
 
   footer: {
     position: "absolute",
-    top: "1400px",
+    top: "1450px",
     left: "80px",
   },
 

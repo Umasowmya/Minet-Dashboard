@@ -2,18 +2,19 @@ import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
 import { Grid } from "@mui/material";
-import Buttons from "../../atoms/Buttons/Buttons";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
+import Card1 from "../../molecules/AmountCard/ButtonCard";
+import Card2 from "../../molecules/AmountCard/TypoCard";
 
 interface amountProps {
   buttonval: string;
   value: string;
-  label1: string;
-  label2: string;
+  price: string;
+  quantity: string;
 }
 
-const index = ({ buttonval, value, label1, label2 }: amountProps) => {
+const index = ({ buttonval, value, price, quantity }: amountProps) => {
   function valuetext(value: number) {
     return `1BTC=$${value}`;
   }
@@ -59,41 +60,7 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         }}
         spacing={3}
       >
-        <Grid
-          sx={{
-            border: "1px solid #E8E8F7",
-            display: "flex",
-            alignItems: "center",
-            width: "663px",
-            p: 1,
-          }}
-        >
-          <Grid item container>
-            <Typo
-              component="div"
-              className={classes.amountDetailsPrice}
-              text={label1}
-              width="300px"
-            />
-          </Grid>
-
-          <Grid item container>
-            <Typo
-              component="div"
-              className={classes.paymentMethod}
-              text=""
-              width="180px"
-            />
-          </Grid>
-
-          <Grid item container>
-            <Buttons
-              variant="outlined"
-              children={buttonval}
-              sx={{ width: "120px", height: "40px" }}
-            />
-          </Grid>
-        </Grid>
+        <Card1 buttonval={buttonval} price={price} />
       </Grid>
 
       <Stack
@@ -128,45 +95,7 @@ const index = ({ buttonval, value, label1, label2 }: amountProps) => {
         }}
         spacing={3}
       >
-        <Grid
-          sx={{
-            border: "1px solid #E8E8F7",
-            display: "flex",
-            p: 1,
-            alignItems: "center",
-            position: "absolute",
-            top: "0px",
-            width: "93%",
-            height: "80%",
-          }}
-        >
-          <Grid item container>
-            <Typo
-              component="div"
-              className={classes.amountDetailsPrice}
-              text={label2}
-              width="250px"
-            />
-          </Grid>
-
-          <Grid item container>
-            <Typo
-              component="div"
-              className={classes.paymentMethod}
-              text=""
-              width="225px"
-            />
-          </Grid>
-
-          <Grid item container>
-            <Typo
-              component="div"
-              className={classes.amountDetailsPrice}
-              text={value}
-              width="120px"
-            />
-          </Grid>
-        </Grid>
+        <Card2 value={value} quantity={quantity} />
 
         <Grid item container sx={{ height: "5px" }}>
           <Typo

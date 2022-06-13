@@ -5,19 +5,17 @@ import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Index from "./index";
-
+import explore from "../../../assets/explore.png";
 export default {
-  title: "organisms/AmountDetails",
+  title: "molecules/ImageWithTypo",
   component: Index,
 } as ComponentMeta<typeof Index>;
 
 const Template: ComponentStory<typeof Index> = (args) => <Index {...args} />;
 
-export const AmountDetails = Template.bind({});
-
-AmountDetails.args = {
-  buttonval: "Sell max",
-  value: "USD coin(cash)",
-  price: "0.0234510 ",
-  quantity: "$34,000.00",
+export const imageWithTypo = Template.bind({});
+imageWithTypo.args = {
+  image: explore,
+  value1: "Bitcoin",
+  value2: "0.0234510 BTC",
 };

@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { backdropClasses, Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
 import { customStyles } from "../../../theme/index";
@@ -21,10 +21,12 @@ const index = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [fee, setFee] = React.useState("Transaction fees:0.001 BTC");
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [flag1, setFlag1] = React.useState(0);
+
   const handleClick = () => {
     setFlag(!flag);
     setdisplay(flag ? "flex" : "none");
-    console.log(display);
   };
 
   return (
@@ -124,6 +126,7 @@ const index = () => {
           onClick={() => {
             setSpeed("Instant: 2-5 minutes");
             setFee("Transaction fees:0.001 BTC");
+            setFlag1(0);
           }}
           style={{
             cursor: "pointer",
@@ -135,6 +138,7 @@ const index = () => {
               width: "95%",
               display: { display },
               border: "1px solid #E8E8F7",
+              backgroundColor: flag1 === 0 ? "#F2F2F7" : "#FFFFFF",
               position: "absolute",
               top: "100%",
               p: 3,
@@ -171,6 +175,7 @@ const index = () => {
           onClick={() => {
             setSpeed("Faster : 4 hours");
             setFee("Transaction fees:0.0001 BTC");
+            setFlag1(1);
           }}
           style={{
             cursor: "pointer",
@@ -184,6 +189,7 @@ const index = () => {
               border: "1px solid #E8E8F7",
               position: "absolute",
               top: "160%",
+              backgroundColor: flag1 === 1 ? "#F2F2F7" : "#FFFFFF",
               p: 3,
             }}
             xs={12}
@@ -217,6 +223,7 @@ const index = () => {
           onClick={() => {
             setSpeed("Fast : 120 hours");
             setFee("Transaction fees:0.00001 BTC");
+            setFlag1(2);
           }}
           style={{
             cursor: "pointer",
@@ -229,6 +236,7 @@ const index = () => {
               display: { display },
               border: "1px solid #E8E8F7",
               position: "absolute",
+              backgroundColor: flag1 === 2 ? "#F2F2F7" : "#FFFFFF",
               top: "224%",
               p: 3,
             }}
@@ -264,6 +272,7 @@ const index = () => {
           onClick={() => {
             setSpeed("None");
             setFee("None");
+            setFlag1(3);
           }}
           style={{
             cursor: "pointer",
@@ -276,6 +285,7 @@ const index = () => {
               display: { display },
               border: "1px solid #E8E8F7",
               position: "absolute",
+              backgroundColor: flag1 === 3 ? "#F2F2F7" : "#FFFFFF",
               top: "289%",
               p: 3,
             }}
