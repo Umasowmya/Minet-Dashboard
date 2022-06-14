@@ -9,7 +9,7 @@ import four from "../../../assets/4.png";
 import five from "../../../assets/5.png";
 import { makeStyles } from "@material-ui/core";
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   verticalHeader: {
     display: "flex",
     flexDirection: "column",
@@ -22,7 +22,7 @@ var customStyles = makeStyles({
   },
 });
 
-const index = () => {
+const SideBar = () => {
   const classes = customStyles();
 
   return (
@@ -139,4 +139,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default SideBar;

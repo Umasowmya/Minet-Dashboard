@@ -10,7 +10,7 @@ interface coinProps {
   price: string;
 }
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   coinName: {
     width: "55px",
     height: "22px",
@@ -19,7 +19,7 @@ var customStyles = makeStyles({
   },
 });
 
-const index = ({ image, title, price }: coinProps) => {
+const Bitcoin = ({ image, title, price }: coinProps) => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -77,4 +77,4 @@ const index = ({ image, title, price }: coinProps) => {
   );
 };
 
-export default index;
+export default Bitcoin;

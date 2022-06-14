@@ -1,15 +1,15 @@
 import React from "react";
 import Template from "../../templates/index";
-import HorizontalHeader from "../../organisms/HeaderH/index";
-import VerticalHeader from "../../organisms/HeaderV/index";
+import Navbar from "../../organisms/Navbar/index";
+import Sidebar from "../../organisms/SideBar/index";
 import Footer from "../../organisms/Footer/index";
 import Success from "../../organisms/SuccessMolecule/index";
 
 const index = () => {
   return (
     <Template
-      HorizontalHeader={<HorizontalHeader />}
-      VerticalHeader={<VerticalHeader />}
+      Navbar={<Navbar />}
+      Sidebar={<Sidebar />}
       Content={
         <Success
           text="Sell is completed, please check your

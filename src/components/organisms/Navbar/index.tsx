@@ -8,15 +8,10 @@ import { makeStyles } from "@material-ui/core";
 
 import img from "../../../assets/avatar.png";
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   checkout: {
     width: "109px",
     height: "34px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 400,
-    fontSize: "24px",
-    lineHeight: "34px",
     color: "#343446",
   },
 
@@ -28,20 +23,25 @@ var customStyles = makeStyles({
     alignItems: "center",
   },
 });
-const index = () => {
+const Navbar = () => {
   const classes = customStyles();
 
   return (
     <Grid item container sx={{}}>
       <Grid item sx={{ position: "absolute", left: "100px", top: "10px" }}>
-        <Typo text="Checkout" component="div" className={classes.checkout} />
+        <Typo
+          text="Checkout"
+          variant="heading"
+          component="div"
+          className={classes.checkout}
+        />
       </Grid>
 
       <Grid item sx={{ position: "absolute", left: "945px" }}>
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ backgroundColor: "#ffa74f" }}
+          sx={{ color: "secondary" }}
         >
           {" "}
           SELL{" "}
@@ -52,7 +52,7 @@ const index = () => {
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ backgroundColor: "#0052FF" }}
+          sx={{ backgroundColor: "primary" }}
         >
           {" "}
           BUY{" "}
@@ -72,4 +72,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navbar;

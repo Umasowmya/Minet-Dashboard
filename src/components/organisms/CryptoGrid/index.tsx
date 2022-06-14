@@ -10,7 +10,7 @@ interface bitcoinProps {
   price: string;
 }
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   scroll: {
     height: "325x",
     overflowY: "scroll",
@@ -29,10 +29,14 @@ var customStyles = makeStyles({
       background: "#B4B4CF",
       borderRadius: "10px",
     },
+
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
   },
 });
 
-const index = () => {
+const CryptoComponent = () => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -69,4 +73,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default CryptoComponent;

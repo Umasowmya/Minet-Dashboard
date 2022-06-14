@@ -9,40 +9,30 @@ import payingThough from "../../../assets/payingThrough.png";
 import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   transaction: {
     width: "101px",
     height: "16px",
-    fontfamily: "Graphik",
-    fontstyle: "normal",
-    fontweight: 500,
-    fontsize: "14px",
-    lineHeight: "16px",
     color: "#7D7D89",
+  },
+
+  hoverfun: {
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
   },
 
   price: {
     width: "171px",
     height: "34px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 400,
-    fontSize: "24px",
-    lineHeight: "34px",
     color: "#343446",
   },
 
   paymentMethoddiv: {
-    fontWeight: 400,
-    fontSize: "14px",
-    lineHeight: "16px",
     color: "#7D7D89",
   },
 
   visaCredit: {
-    fontWeight: 600,
-    fontSize: "16px",
-    lineHeight: "22px",
     color: "#343446",
   },
 });
@@ -58,7 +48,7 @@ interface GridProps {
   button: string;
 }
 
-const index = ({
+const Transaction = ({
   transaction,
   label11,
   label12,
@@ -80,11 +70,12 @@ const index = ({
       direction="column"
       alignItems="center"
       border="1px solid #E8E8F7"
+      className={classes.hoverfun}
       sx={{ width: "527px", height: "646px" }}
     >
       <Grid item sx={{ pt: 2 }}>
         <Typo
-          variant="caption"
+          variant="body1"
           component="div"
           text={transaction}
           className={classes.transaction}
@@ -93,7 +84,7 @@ const index = ({
       </Grid>
       <Grid item>
         <Typo
-          variant="heading3"
+          variant="heading"
           component="div"
           text="0.0234510 BTC"
           className={classes.price}
@@ -101,7 +92,7 @@ const index = ({
       </Grid>
       <Grid item>
         <Typo
-          variant="caption"
+          variant="body1"
           component="div"
           text="1BTC = $3,406,069.54"
           className={classes.transaction}
@@ -142,7 +133,7 @@ const index = ({
               </Grid>
               <Grid>
                 <Typo
-                  variant="body1"
+                  variant="subtitle5"
                   component="div"
                   text={label12}
                   width="164px"
@@ -178,7 +169,7 @@ const index = ({
               </Grid>
               <Grid>
                 <Typo
-                  variant="body1"
+                  variant="subtitle5"
                   component="div"
                   text={label22}
                   width="164px"
@@ -221,7 +212,7 @@ const index = ({
               </Grid>
               <Grid>
                 <Typo
-                  variant="body1"
+                  variant="subtitle5"
                   component="div"
                   text={label32}
                   width="164px"
@@ -332,4 +323,4 @@ const index = ({
   );
 };
 
-export default index;
+export default Transaction;

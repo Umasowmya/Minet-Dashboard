@@ -12,7 +12,7 @@ interface assetsProps {
   graph: string;
 }
 
-const index = ({ cryptoImage, cryptoItem, price, graph }: assetsProps) => {
+const Assets = ({ cryptoImage, cryptoItem, price, graph }: assetsProps) => {
   return (
     <Grid
       container
@@ -48,4 +48,4 @@ const index = ({ cryptoImage, cryptoItem, price, graph }: assetsProps) => {
   );
 };
 
-export default index;
+export default Assets;

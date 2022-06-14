@@ -10,10 +10,10 @@ interface investmentProps {
   price: string;
 }
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   investment: {
     fontWeight: 500,
-    fontSize: "12px",
+    fontSize: "10px",
     lineHeight: "16px",
     color: "#7D7D89",
   },
@@ -26,10 +26,10 @@ var customStyles = makeStyles({
   },
 });
 
-const index = ({ title, image, price }: investmentProps) => {
+const InvestmentCard = ({ title, image, price }: investmentProps) => {
   const classes = customStyles();
   return (
-    <Grid>
+    <Grid sx={{ p: 2 }}>
       <Grid item sx={{ display: "flex" }}>
         <Typo
           component="div"
@@ -51,4 +51,4 @@ const index = ({ title, image, price }: investmentProps) => {
   );
 };
 
-export default index;
+export default InvestmentCard;

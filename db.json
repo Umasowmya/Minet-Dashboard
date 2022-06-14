@@ -95,5 +95,43 @@
       "title": "Tether",
       "price": "$74.21"
     }
-  ]
+  ],
+
+
+  "discoverItems":[
+    {
+      "cryptoImage":"explore.png",
+      "cryptoItem":"Bitcoin",
+      "price":"$3,00,439.93",
+      "graph":"bitcoinGraph.png"
+
+    },
+
+    {
+      "cryptoImage":"etherum.png",
+      "cryptoItem":"Etherum",
+      "price":"$26,128.24",
+      "graph":"bitcoinGraph.png"
+
+    },
+
+    {
+      "cryptoImage":"etherum.png",
+      "cryptoItem":"Etherum 2",
+      "price":"$26,128.24",
+      "graph":"bitcoinGraph.png"
+
+    },
+
+    {
+      "cryptoImage":"Tether.png",
+      "cryptoItem":"Tether",
+      "price":"$74.14",
+      "graph":"bitcoinGraph.png"
+
+    }
+
+
+
+]
 }

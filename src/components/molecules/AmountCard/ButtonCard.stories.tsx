@@ -7,7 +7,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Index from "./ButtonCard";
 import { Button } from "@material-ui/core";
 import Buttons from "../../atoms/Buttons/Buttons";
-import VerticalHeader from "../../organisms/HeaderV/index";
+import VerticalHeader from "../../organisms/SideBar/index";
 
 export default {
   title: "molecules/card1",

@@ -5,26 +5,16 @@ import Buttons from "../../atoms/Buttons/Buttons";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { makeStyles } from "@material-ui/core";
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   footerElement: {
     width: "83px",
     height: "22px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 400,
-    fontSize: "16px",
-    lineHeight: "22px",
     color: "#0052FF",
   },
 
   footerElement2: {
     width: "83px",
     height: "22px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 400,
-    fontSize: "16px",
-    lineHeight: "22px",
     color: "#343446",
   },
 
@@ -34,7 +24,7 @@ var customStyles = makeStyles({
     left: "80px",
   },
 });
-const index = () => {
+const Footer = () => {
   const classes = customStyles();
   return (
     <Grid
@@ -50,7 +40,7 @@ const index = () => {
     >
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           className={classes.footerElement}
           component="div"
           text="DashBoard"
@@ -59,7 +49,7 @@ const index = () => {
 
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           className={classes.footerElement}
           component="div"
           text="Careers"
@@ -68,7 +58,7 @@ const index = () => {
 
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           className={classes.footerElement}
           width="150px"
           component="div"
@@ -78,7 +68,7 @@ const index = () => {
 
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           width="120px"
           className={classes.footerElement2}
           component="div"
@@ -114,4 +104,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Footer;

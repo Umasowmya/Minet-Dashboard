@@ -10,7 +10,7 @@ interface Props {
   button2: string;
 }
 
-const index = ({ text, button1, button2 }: Props) => {
+const SuccessComponent = ({ text, button1, button2 }: Props) => {
   return (
     <Grid
       container
@@ -82,4 +82,4 @@ const index = ({ text, button1, button2 }: Props) => {
   );
 };
 
-export default index;
+export default SuccessComponent;

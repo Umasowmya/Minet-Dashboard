@@ -4,42 +4,27 @@ import Typo from "../../atoms/Typo/index";
 import rupee from "../../../assets/rupee.png";
 import { makeStyles } from "@material-ui/core";
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   paymentMethod: {
     width: "250px",
     height: "22px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "22px",
     color: "#343446",
   },
 
   currency: {
     width: "250px",
     height: "28px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "14px",
-    lineHeight: "16px",
     color: "#343446",
   },
 
   totalBalance: {
     width: "251px",
     height: "28px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "20px",
-    lineHeight: "28px",
     color: "#7D7D89",
   },
 });
 
-const index = () => {
+const PaymentCard = () => {
   const classes = customStyles();
 
   return (
@@ -65,6 +50,7 @@ const index = () => {
 
       <Grid item container>
         <Typo
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text=""
@@ -75,6 +61,7 @@ const index = () => {
       <Grid item direction="column">
         <Grid item sm={1}>
           <Typo
+            variant="subtitle1"
             component="div"
             width="120px"
             text="USD Coin cash"
@@ -84,6 +71,7 @@ const index = () => {
 
         <Grid item sm={1}>
           <Typo
+            variant="subtitle1"
             component="div"
             width="240px"
             text="Total Balance - $34,000"
@@ -94,6 +82,7 @@ const index = () => {
 
       <Grid item container>
         <Typo
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text=""
@@ -103,6 +92,7 @@ const index = () => {
 
       <Grid item container>
         <Typo
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text="Default"
@@ -112,4 +102,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default PaymentCard;

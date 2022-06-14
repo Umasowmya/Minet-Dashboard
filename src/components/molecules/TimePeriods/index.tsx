@@ -8,7 +8,7 @@ import orangeImage from "../../../assets/orangeImage.png";
 
 const array = ["1H", "24H", "1W", "1M", "1Y", "ALL"];
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   month: {
     color: "#0052FF",
   },
@@ -20,7 +20,7 @@ var customStyles = makeStyles({
   },
 });
 
-const index = () => {
+const TimeComponent = () => {
   const classes = customStyles();
   return (
     <Grid container direction="row" justifyContent="end">
@@ -36,7 +36,7 @@ const index = () => {
       >
         {array.map((value: string) => {
           return (
-            <Grid item sx={{ p: 1, size: "32px", color: "#7D7D89" }}>
+            <Grid item sx={{ p: 0.5, width: "32px", color: "#7D7D89" }}>
               {value === "1M" ? (
                 <>
                   <Typo
@@ -55,7 +55,7 @@ const index = () => {
         })}
       </Grid>
 
-      <Grid container direction="row" justifyContent="end">
+      <Grid container direction="row" justifyContent="end" sx={{ p: 2 }}>
         <Grid item sx={{ display: "flex", alignItems: "center", p: 1 }}>
           <img src={orangeImage} width="8px" height="8px" />
           <Typo component="div" text="Bitcoin" className={classes.bitcoin} />
@@ -74,4 +74,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default TimeComponent;

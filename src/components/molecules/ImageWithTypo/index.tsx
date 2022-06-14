@@ -9,41 +9,26 @@ interface Props {
   value2: string;
 }
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
   paymentMethod: {
     width: "250px",
     height: "22px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "22px",
     color: "#343446",
   },
 
   currency: {
     width: "250px",
     height: "28px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "14px",
-    lineHeight: "16px",
     color: "#343446",
   },
 
   amountDetailsPrice: {
     width: "118px",
     height: "28px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "18px",
-    lineHeight: "28px",
     color: "#343446",
   },
 });
-const index = ({ image, value1, value2 }: Props) => {
+const ImageWithTypo = ({ image, value1, value2 }: Props) => {
   const classes = customStyles();
 
   return (
@@ -76,6 +61,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item sm={1}>
         <Typo
           component="div"
+          variant="subtitle1"
           width="120px"
           text={value1}
           className={classes.currency}
@@ -85,6 +71,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           className={classes.paymentMethod}
           text=""
           width="5px"
@@ -93,6 +80,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           className={classes.paymentMethod}
           text=""
           width="200px"
@@ -102,6 +90,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           width="120px"
           className={classes.amountDetailsPrice}
           text={value2}
@@ -111,4 +100,4 @@ const index = ({ image, value1, value2 }: Props) => {
   );
 };
 
-export default index;
+export default ImageWithTypo;

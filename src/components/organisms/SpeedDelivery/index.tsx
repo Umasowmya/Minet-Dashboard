@@ -7,37 +7,28 @@ import { Button } from "@mui/material";
 
 import { makeStyles } from "@material-ui/core";
 
-var customStyles = makeStyles({
+const customStyles = makeStyles({
+  hoverfun: {
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
+  },
+
   paymentMethod: {
     width: "250px",
     height: "22px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "22px",
     color: "#343446",
   },
 
   currency: {
     width: "250px",
     height: "28px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "14px",
-    lineHeight: "16px",
     color: "#343446",
   },
 
   totalBalance: {
     width: "251px",
     height: "28px",
-    fontFamily: "Graphik",
-    fontStyle: "normal",
-    fontWeight: 500,
-    fontSize: "20px",
-    lineHeight: "28px",
     color: "#7D7D89",
   },
 
@@ -46,7 +37,7 @@ var customStyles = makeStyles({
   },
 });
 
-const index = () => {
+const Delivery = () => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -81,10 +72,11 @@ const index = () => {
         zIndex: "0",
       }}
       spacing={5}
+      className={classes.hoverfun}
     >
       <Grid item container sx={{ position: "relative" }}>
         <Typo
-          variant="body1"
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text="Select speed delivery"
@@ -121,6 +113,7 @@ const index = () => {
           <Grid item container>
             <Typo
               component="div"
+              variant="subtitle1"
               className={classes.paymentMethod}
               text=""
               width="0px"
@@ -131,8 +124,9 @@ const index = () => {
             <Grid item sm={1}>
               <Typo
                 component="div"
-                width="150px"
+                width="180px"
                 text={speed}
+                variant="subtitle1"
                 className={classes.currency}
               />
             </Grid>
@@ -142,6 +136,7 @@ const index = () => {
                 component="div"
                 width="240px"
                 text={fee}
+                variant="subtitle1"
                 className={classes.totalBalance}
               />
             </Grid>
@@ -150,6 +145,7 @@ const index = () => {
           <Grid item container>
             <Typo
               component="div"
+              variant="subtitle1"
               className={classes.paymentMethod}
               text=""
               width="150px"
@@ -194,6 +190,7 @@ const index = () => {
                 className={classes.currency}
                 component="div"
                 text="Instant: 2-5 minutes"
+                variant="subtitle1"
               />
             </Grid>
 
@@ -206,6 +203,7 @@ const index = () => {
                 className={classes.totalBalance}
                 component="div"
                 text="Delivery fees : 0.001 BTC"
+                variant="subtitle1"
               />
             </Grid>
           </Grid>
@@ -242,6 +240,7 @@ const index = () => {
               <Typo
                 className={classes.currency}
                 component="div"
+                variant="subtitle1"
                 text="Faster : 4 hours"
               />
             </Grid>
@@ -255,6 +254,7 @@ const index = () => {
                 className={classes.totalBalance}
                 component="div"
                 text="Delivery fees : 0.0001 BTC"
+                variant="subtitle1"
               />
             </Grid>
           </Grid>
@@ -289,6 +289,7 @@ const index = () => {
             >
               <Typo
                 className={classes.currency}
+                variant="subtitle1"
                 component="div"
                 text="Fast : 120 hours"
               />
@@ -303,6 +304,7 @@ const index = () => {
                 className={classes.totalBalance}
                 component="div"
                 text="Delivery fees : 0.00001 BTC"
+                variant="body1"
               />
             </Grid>
           </Grid>
@@ -336,7 +338,12 @@ const index = () => {
               xs={6}
               sx={{ display: { display }, alignItems: "center" }}
             >
-              <Typo className={classes.currency} component="div" text="None" />
+              <Typo
+                className={classes.currency}
+                component="div"
+                variant="subtitle1"
+                text="None"
+              />
             </Grid>
           </Grid>
         </span>
@@ -345,4 +352,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Delivery;
