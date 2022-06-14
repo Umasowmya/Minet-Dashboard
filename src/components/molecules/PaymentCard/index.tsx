@@ -1,10 +1,30 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
 import rupee from "../../../assets/rupee.png";
+import { makeStyles } from "@material-ui/core";
 
-const index = () => {
+const customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    color: "#343446",
+  },
+
+  currency: {
+    width: "250px",
+    height: "28px",
+    color: "#343446",
+  },
+
+  totalBalance: {
+    width: "251px",
+    height: "28px",
+    color: "#7D7D89",
+  },
+});
+
+const PaymentCard = () => {
   const classes = customStyles();
 
   return (
@@ -30,6 +50,7 @@ const index = () => {
 
       <Grid item container>
         <Typo
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text=""
@@ -40,6 +61,7 @@ const index = () => {
       <Grid item direction="column">
         <Grid item sm={1}>
           <Typo
+            variant="subtitle1"
             component="div"
             width="120px"
             text="USD Coin cash"
@@ -49,6 +71,7 @@ const index = () => {
 
         <Grid item sm={1}>
           <Typo
+            variant="subtitle1"
             component="div"
             width="240px"
             text="Total Balance - $34,000"
@@ -59,6 +82,7 @@ const index = () => {
 
       <Grid item container>
         <Typo
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text=""
@@ -68,6 +92,7 @@ const index = () => {
 
       <Grid item container>
         <Typo
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text="Default"
@@ -77,4 +102,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default PaymentCard;

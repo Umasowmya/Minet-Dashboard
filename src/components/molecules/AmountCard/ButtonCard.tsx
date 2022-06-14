@@ -1,15 +1,28 @@
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
 import { Grid } from "@mui/material";
-import Buttons from "../../atoms/Buttons/Buttons";
+import { makeStyles } from "@material-ui/core";
 
 interface Props {
-  price: string;
-  buttonval: string;
+  label: string;
+  Atom: React.ReactNode;
 }
 
-const index1 = ({ price, buttonval }: Props) => {
+const customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    color: "#343446",
+  },
+
+  amountDetailsPrice: {
+    width: "118px",
+    height: "28px",
+    color: "#343446",
+  },
+});
+
+const ButtonCard = ({ label, Atom }: Props) => {
   const classes = customStyles();
 
   return (
@@ -18,15 +31,16 @@ const index1 = ({ price, buttonval }: Props) => {
         border: "1px solid #E8E8F7",
         display: "flex",
         alignItems: "center",
-        width: "663px",
+        width: "623px",
         p: 1,
       }}
     >
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle2"
           className={classes.amountDetailsPrice}
-          text={price}
+          text={label}
           width="300px"
         />
       </Grid>
@@ -34,6 +48,7 @@ const index1 = ({ price, buttonval }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           className={classes.paymentMethod}
           text=""
           width="180px"
@@ -41,14 +56,10 @@ const index1 = ({ price, buttonval }: Props) => {
       </Grid>
 
       <Grid item container>
-        <Buttons
-          variant="outlined"
-          children={buttonval}
-          sx={{ width: "120px", height: "40px" }}
-        />
+        {Atom}
       </Grid>
     </Grid>
   );
 };
 
-export default index1;
+export default ButtonCard;

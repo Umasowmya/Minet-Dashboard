@@ -2,26 +2,21 @@ import React from "react";
 import { Divider, Grid } from "@mui/material";
 
 interface Props {
-  VerticalHeader: React.ReactNode;
-  HorizontalHeader: React.ReactNode;
+  Sidebar: React.ReactNode;
+  Navbar: React.ReactNode;
   Content: React.ReactNode;
   Footer: React.ReactNode;
 }
 
-const index = ({
-  VerticalHeader,
-  HorizontalHeader,
-  Content,
-  Footer,
-}: Props) => {
+const index = ({ Sidebar, Navbar, Content, Footer }: Props) => {
   return (
     <>
       <Grid container direction="column" sx={{ width: "90%" }}>
         <Grid item sx={{ position: "absolute", left: "2%" }}>
-          {VerticalHeader}
+          {Sidebar}
         </Grid>
         <Grid item sx={{ position: "absolute", top: "3%" }}>
-          {HorizontalHeader}
+          {Navbar}
         </Grid>
         <Grid>{Content}</Grid>
         {Footer}

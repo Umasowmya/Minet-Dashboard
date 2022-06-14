@@ -1,15 +1,34 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
-import explore from "../../../assets/explore.png";
+import { makeStyles } from "@material-ui/core";
 
 interface Props {
   image: string;
   value1: string;
   value2: string;
 }
-const index = ({ image, value1, value2 }: Props) => {
+
+const customStyles = makeStyles({
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    color: "#343446",
+  },
+
+  currency: {
+    width: "250px",
+    height: "28px",
+    color: "#343446",
+  },
+
+  amountDetailsPrice: {
+    width: "118px",
+    height: "28px",
+    color: "#343446",
+  },
+});
+const ImageWithTypo = ({ image, value1, value2 }: Props) => {
   const classes = customStyles();
 
   return (
@@ -42,6 +61,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item sm={1}>
         <Typo
           component="div"
+          variant="subtitle1"
           width="120px"
           text={value1}
           className={classes.currency}
@@ -51,6 +71,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           className={classes.paymentMethod}
           text=""
           width="5px"
@@ -59,6 +80,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           className={classes.paymentMethod}
           text=""
           width="200px"
@@ -68,6 +90,7 @@ const index = ({ image, value1, value2 }: Props) => {
       <Grid item container>
         <Typo
           component="div"
+          variant="subtitle1"
           width="120px"
           className={classes.amountDetailsPrice}
           text={value2}
@@ -77,4 +100,4 @@ const index = ({ image, value1, value2 }: Props) => {
   );
 };
 
-export default index;
+export default ImageWithTypo;

@@ -1,11 +1,10 @@
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
-import Card1 from "../../molecules/AmountCard/ButtonCard";
-import Card2 from "../../molecules/AmountCard/TypoCard";
+import Card from "../../molecules/AmountCard/ButtonCard";
+import { makeStyles } from "@material-ui/core";
 
 interface amountProps {
   buttonval: string;
@@ -14,7 +13,32 @@ interface amountProps {
   quantity: string;
 }
 
-const index = ({ buttonval, value, price, quantity }: amountProps) => {
+const customStyles = makeStyles({
+  hoverfun: {
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
+  },
+
+  paymentMethod: {
+    width: "250px",
+    height: "22px",
+    color: "#343446",
+  },
+
+  amountDetailsPrice: {
+    width: "118px",
+    height: "28px",
+    color: "#343446",
+  },
+});
+
+const AmountComponent = ({
+  buttonval,
+  value,
+  price,
+  quantity,
+}: amountProps) => {
   function valuetext(value: number) {
     return `1BTC=$${value}`;
   }
@@ -38,12 +62,14 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
         flexDirection: "row",
         alignItems: "center",
         position: "relative",
+        // &hover:"0 8px 16px 0 rgba(0,0,0,0.2)"
       }}
       spacing={5}
+      className={classes.hoverfun}
     >
       <Grid item container sx={{ p: 1 }}>
         <Typo
-          variant="body1"
+          variant="subtitle1"
           component="div"
           className={classes.paymentMethod}
           text="Amount Details"
@@ -60,7 +86,10 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
         }}
         spacing={3}
       >
-        <Card1 buttonval={buttonval} price={price} />
+        <Card
+          Atom={<Button variant="outlined">{buttonval}</Button>}
+          label={price}
+        />
       </Grid>
 
       <Stack
@@ -78,6 +107,7 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
           getAriaValueText={valuetext}
           defaultValue={[50]}
           marks={marks}
+          size="small"
           disabled
         />
       </Stack>
@@ -90,15 +120,35 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
           p: 2,
           width: "663px",
           alignItems: "center",
-
           position: "relative",
         }}
         spacing={3}
       >
-        <Card2 value={value} quantity={quantity} />
+        <Grid
+          sx={{
+            position: "absolute",
+            top: "0px",
+            width: "90%",
+            height: "80%",
+          }}
+        >
+          <Card
+            Atom={
+              <Typo
+                variant="subtitle1"
+                component="div"
+                className={classes.amountDetailsPrice}
+                text={value}
+                width="120px"
+              />
+            }
+            label={quantity}
+          />
+        </Grid>
 
         <Grid item container sx={{ height: "5px" }}>
           <Typo
+            variant="subtitle1"
             component="div"
             className={classes.paymentMethod}
             text=""
@@ -110,4 +160,4 @@ const index = ({ buttonval, value, price, quantity }: amountProps) => {
   );
 };
 
-export default index;
+export default AmountComponent;

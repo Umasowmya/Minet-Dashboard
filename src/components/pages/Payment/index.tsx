@@ -1,7 +1,7 @@
 import React from "react";
 import Template from "../../templates/index";
-import HorizontalHeader from "../../organisms/HeaderH/index";
-import VerticalHeader from "../../organisms/HeaderV/index";
+import Navbar from "../../organisms/Navbar/index";
+import SideBar from "../../organisms/SideBar/index";
 import { Grid, Typography } from "@mui/material";
 import Footer from "../../organisms/Footer/index";
 import CryptoGrid from "../../organisms/CryptoGrid/index";
@@ -13,8 +13,8 @@ import Deposit from "../../organisms/deposit/index";
 const index = () => {
   return (
     <Template
-      HorizontalHeader={<HorizontalHeader />}
-      VerticalHeader={<VerticalHeader />}
+      Navbar={<Navbar />}
+      Sidebar={<SideBar />}
       Content={
         <>
           <Grid

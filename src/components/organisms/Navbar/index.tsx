@@ -1,28 +1,47 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Buttons from "../../atoms/Buttons/Buttons";
-import Ava from "../../atoms/Avatar/index";
+import Ava from "../../atoms/Avatar/Ava";
 import Typo from "../../atoms/Typo/index";
 import { KeyboardArrowDown } from "@mui/icons-material";
+import { makeStyles } from "@material-ui/core";
 
 import img from "../../../assets/avatar.png";
 
-import { customStyles } from "../../../theme/index";
+const customStyles = makeStyles({
+  checkout: {
+    width: "109px",
+    height: "34px",
+    color: "#343446",
+  },
 
-const index = () => {
+  sellButton: {
+    width: "120px",
+    height: "42px",
+    // background: "#FFA74F",
+    borderRadius: "4px",
+    alignItems: "center",
+  },
+});
+const Navbar = () => {
   const classes = customStyles();
 
   return (
     <Grid item container sx={{}}>
       <Grid item sx={{ position: "absolute", left: "100px", top: "10px" }}>
-        <Typo text="Checkout" component="div" className={classes.checkout} />
+        <Typo
+          text="Checkout"
+          variant="heading"
+          component="div"
+          className={classes.checkout}
+        />
       </Grid>
 
       <Grid item sx={{ position: "absolute", left: "945px" }}>
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ backgroundColor: "#ffa74f" }}
+          sx={{ color: "secondary" }}
         >
           {" "}
           SELL{" "}
@@ -33,7 +52,7 @@ const index = () => {
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ backgroundColor: "#0052FF" }}
+          sx={{ backgroundColor: "primary" }}
         >
           {" "}
           BUY{" "}
@@ -53,4 +72,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navbar;

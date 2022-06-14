@@ -1,11 +1,30 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import Buttons from "../../atoms/Buttons/Buttons";
 import { KeyboardArrowDown } from "@mui/icons-material";
+import { makeStyles } from "@material-ui/core";
 
-const index = () => {
+const customStyles = makeStyles({
+  footerElement: {
+    width: "83px",
+    height: "22px",
+    color: "#0052FF",
+  },
+
+  footerElement2: {
+    width: "83px",
+    height: "22px",
+    color: "#343446",
+  },
+
+  footer: {
+    position: "absolute",
+    top: "1450px",
+    left: "80px",
+  },
+});
+const Footer = () => {
   const classes = customStyles();
   return (
     <Grid
@@ -21,7 +40,7 @@ const index = () => {
     >
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           className={classes.footerElement}
           component="div"
           text="DashBoard"
@@ -30,7 +49,7 @@ const index = () => {
 
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           className={classes.footerElement}
           component="div"
           text="Careers"
@@ -39,7 +58,7 @@ const index = () => {
 
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           className={classes.footerElement}
           width="150px"
           component="div"
@@ -49,7 +68,7 @@ const index = () => {
 
       <Grid item>
         <Typo
-          variant="body2"
+          variant="heading3"
           width="120px"
           className={classes.footerElement2}
           component="div"
@@ -85,4 +104,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Footer;

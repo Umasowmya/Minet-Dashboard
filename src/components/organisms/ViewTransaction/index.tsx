@@ -1,13 +1,41 @@
 import { Button, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo/index";
-import { customStyles } from "../../../theme/index";
 import payment from "../../../assets/payment.png";
 import delivery from "../../../assets/delivery.png";
 import deposit from "../../../assets/deposit.png";
 import rupee from "../../../assets/rupee.png";
 import payingThough from "../../../assets/payingThrough.png";
 import { useNavigate } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
+
+const customStyles = makeStyles({
+  transaction: {
+    width: "101px",
+    height: "16px",
+    color: "#7D7D89",
+  },
+
+  hoverfun: {
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
+  },
+
+  price: {
+    width: "171px",
+    height: "34px",
+    color: "#343446",
+  },
+
+  paymentMethoddiv: {
+    color: "#7D7D89",
+  },
+
+  visaCredit: {
+    color: "#343446",
+  },
+});
 
 interface GridProps {
   transaction: string;
@@ -20,7 +48,7 @@ interface GridProps {
   button: string;
 }
 
-const index = ({
+const Transaction = ({
   transaction,
   label11,
   label12,
@@ -30,10 +58,10 @@ const index = ({
   label32,
   button,
 }: GridProps) => {
-  const classes = customStyles();
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigate = useNavigate();
+
+  const classes = customStyles();
 
   return (
     <Grid
@@ -42,11 +70,12 @@ const index = ({
       direction="column"
       alignItems="center"
       border="1px solid #E8E8F7"
+      className={classes.hoverfun}
       sx={{ width: "527px", height: "646px" }}
     >
       <Grid item sx={{ pt: 2 }}>
         <Typo
-          variant="caption"
+          variant="body1"
           component="div"
           text={transaction}
           className={classes.transaction}
@@ -55,7 +84,7 @@ const index = ({
       </Grid>
       <Grid item>
         <Typo
-          variant="heading3"
+          variant="heading"
           component="div"
           text="0.0234510 BTC"
           className={classes.price}
@@ -63,7 +92,7 @@ const index = ({
       </Grid>
       <Grid item>
         <Typo
-          variant="caption"
+          variant="body1"
           component="div"
           text="1BTC = $3,406,069.54"
           className={classes.transaction}
@@ -104,7 +133,7 @@ const index = ({
               </Grid>
               <Grid>
                 <Typo
-                  variant="body1"
+                  variant="subtitle5"
                   component="div"
                   text={label12}
                   width="164px"
@@ -140,7 +169,7 @@ const index = ({
               </Grid>
               <Grid>
                 <Typo
-                  variant="body1"
+                  variant="subtitle5"
                   component="div"
                   text={label22}
                   width="164px"
@@ -183,7 +212,7 @@ const index = ({
               </Grid>
               <Grid>
                 <Typo
-                  variant="body1"
+                  variant="subtitle5"
                   component="div"
                   text={label32}
                   width="164px"
@@ -294,4 +323,4 @@ const index = ({
   );
 };
 
-export default index;
+export default Transaction;

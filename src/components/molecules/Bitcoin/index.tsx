@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
-import { customStyles } from "../../../theme";
 import Typo from "../../atoms/Typo/index";
 import tick from "../../../assets/tick.png";
+import { makeStyles } from "@material-ui/core";
 
 interface coinProps {
   image: string;
@@ -10,7 +10,16 @@ interface coinProps {
   price: string;
 }
 
-const index = ({ image, title, price }: coinProps) => {
+const customStyles = makeStyles({
+  coinName: {
+    width: "55px",
+    height: "22px",
+    lineHeight: "22px",
+    color: "#4B4B60",
+  },
+});
+
+const Bitcoin = ({ image, title, price }: coinProps) => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -68,4 +77,4 @@ const index = ({ image, title, price }: coinProps) => {
   );
 };
 
-export default index;
+export default Bitcoin;
