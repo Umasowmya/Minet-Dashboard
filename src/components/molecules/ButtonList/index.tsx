@@ -38,6 +38,18 @@ const ButtonList = () => {
       >
         Bitcoin
       </Button>
+
+      <Button
+        sx={{
+          background: "#F7931A",
+          border: "1px solid #F7931A",
+          textTransform: "none",
+          color: "#FFFFFF",
+        }}
+        className={classes.highlight}
+      >
+        Bitcoin
+      </Button>
     </Grid>
   );
 };
