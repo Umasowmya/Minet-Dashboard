@@ -15,6 +15,10 @@ const Portfolio = () => {
         border: "1px solid #E8E8F7",
         position: "relative",
         width: "840px",
+        height: "500px",
+        "&:hover": {
+          boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+        },
       }}
     >
       <Grid
@@ -28,15 +32,15 @@ const Portfolio = () => {
           justifyContent: "space-between",
         }}
       >
-        <Grid sx={{ display: "flex", width: "360px", p: 1 }} spacing={2}>
-          <Grid item sx={{ p: 1 }}>
+        <Grid sx={{ display: "flex", width: "360px" }} spacing={2}>
+          <Grid item>
             <InvestmentCard
               title="Total Investment"
               price="$ 11,900,204"
               image={image}
             />
           </Grid>
-          <Grid item sx={{ p: 1 }}>
+          <Grid item>
             <InvestmentCard
               title="Bitcoin"
               price="$34,000.00"
@@ -44,7 +48,7 @@ const Portfolio = () => {
             />
           </Grid>
         </Grid>
-        <Grid sx={{ width: "380px", height: "89px", p: 1 }}>
+        <Grid sx={{ width: "380px", height: "89px" }}>
           <TimeComponent />
         </Grid>
       </Grid>

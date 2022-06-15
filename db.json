@@ -2,98 +2,130 @@
 
   "cryptoItems":[
     {
+      "id":1,
       "image": "explore.png",
       "title": "Bitcoin",
-      "price": "$3,406,069.54"
+      "price": "$3,406,069.54",
+      "status":"false"
     },
 
     {
+      "id":2,
       "image": "etherum.png",
       "title": "Etherum",
-      "price": "$240,048.03"
+      "price": "$240,048.03",
+      "status":"false"
     },
 
     {
+      "id":3,
       "image": "binance.png",
       "title": "Binance",
-      "price": "$30,054.88"
+      "price": "$30,054.88",
+      "status":"false"
     },
 
     {
+      "id":4,
       "image": "Tether.png",
       "title": "Tether",
-      "price": "$74.21"
+      "price": "$74.21",
+      "status":"false"
     },
 
     {
+      "id":5,
       "image": "cardano.png",
       "title": "Cardono",
-      "price": "$138.22"
+      "price": "$138.22",
+      "status":"false"
     },
 
     {
+      "id":6,
       "image": "xrp.png",
       "title": "XRP",
-      "price": "$76.73"
+      "price": "$76.73",
+      "status":"false"
     },
 
     {
+      "id":7,
       "image": "dogecoin.png",
       "title": "Dogecoin",
-      "price": "$21.37"
+      "price": "$21.37",
+      "status":"false"
     },
 
     {
+      "id":8,
       "image": "polka.png",
       "title": "Polkadot",
-      "price": "$1642.39"
+      "price": "$1642.39",
+      "status":"false"
     },
 
     {
+      "id":9,
       "image": "cardano.png",
       "title": "Cardono",
-      "price": "$138.22"
+      "price": "$138.22",
+      "status":"false"
     },
 
     {
+      "id":10,
       "image": "xrp.png",
       "title": "XRP",
-      "price": "$76.73"
+      "price": "$76.73",
+      "status":"false"
     },
 
     {
+      "id":11,
       "image": "dogecoin.png",
       "title":"Dogecoin",
-      "price": "$21.37"
+      "price": "$21.37",
+      "status":"false"
     },
 
     {
+      "id":12,
       "image": "polka.png",
       "title": "Polkadot",
-      "price": "$1642.39"
+      "price": "$1642.39",
+      "status":"false"
     },
     {
+      "id":13,
       "image": "explore.png",
       "title": "Bitcoin",
-      "price": "$3,406,069.54"
+      "price": "$3,406,069.54",
+      "status":"false"
     },
 
     {
+      "id":14,
       "image": "etherum.png",
       "title": "Etherum",
-      "price": "$240,048.03"
+      "price": "$240,048.03",
+      "status":"false"
     },
 
     {
+      "id":15,
       "image": "binance.png",
       "title": "Binance",
-      "price": "$30,054.88"
+      "price": "$30,054.88",
+      "status":"false"
     },
 
     {
+      "id":16,
       "image": "Tether.png",
       "title": "Tether",
-      "price": "$74.21"
+      "price": "$74.21",
+      "status":"false"
     }
   ],
 
@@ -133,5 +165,103 @@
 
 
 
-]
+],
+
+
+  "portfolioItems":[
+    {
+      "image":"explore.png",
+      "cryptoItem":"Bitcoin",
+      "price":"$34,000.00",
+      "profit":"+1.2%",
+      "group":"BTC"
+      
+
+    },
+  
+    {
+      "image":"etherum.png",
+      "cryptoItem":"Etherum",
+      "price":"$230,966.00",
+      "profit":"+6.85%",
+      "group":"ETH"
+
+    },
+  
+    {
+      "image":"Tether.png",
+      "cryptoItem":"Tether",
+      "price":"$78.00",
+      "profit":"-0.01%",
+      "group":"USDT"
+
+    },
+  
+    {
+      "image":"explore.png",
+      "cryptoItem":"Bitcoin",
+      "price":"$34,000.00",
+      "profit":"+1.2%",
+      "group":"BTC"
+
+    }
+  
+  
+  
+  ],
+
+
+  "buttonList":[
+    
+    {
+      "buttonval":"Bitcoin",
+       "border":"1px solid orange",
+       "background":"rgba(247, 147, 26, 0.2)"
+    },
+
+    {
+      "buttonval":"XRP",
+       "border":"1px solid black",
+       "background":"rgba(34, 34, 34, 0.2)"
+    },
+
+    {
+      "buttonval":"Polkadot",
+       "border":"1px solid #E6007A",
+       "background":"rgba(230, 0, 122, 0.2);"
+    },
+
+    {
+      "buttonval":"Etherum",
+       "border":"1px solid #627EEAe",
+       "background":" rgba(98, 126, 234, 0.2);"
+    },
+
+    {
+      "buttonval":"Tether",
+       "border":"1px solid #26A17B",
+       "background":" rgba(38, 161, 123, 0.2)"
+    },
+
+    {
+      "buttonval":"Etherum2",
+       "border":"1px solid #191971",
+       "background":"rgba(25, 25, 113, 0.2)"
+    },
+
+    {
+      "buttonval":"Dogecoin",
+       "border":"1px solid #DBC984",
+       "background":"rgba(219, 201, 132, 0.2)"
+    }
+
+  ],
+
+
+  "transaction":[
+   
+  ]
+
+
+  
 }

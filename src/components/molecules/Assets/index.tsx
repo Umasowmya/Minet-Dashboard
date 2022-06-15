@@ -18,9 +18,12 @@ const Assets = ({ cryptoImage, cryptoItem, price, graph }: assetsProps) => {
       container
       sx={{
         display: "flex",
-        border: "1px solid #E8E8F7",
         p: 2,
         width: "fit-content",
+        "&:hover": {
+          boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+          border: "2px solid #E8E8F7",
+        },
       }}
       spacing={3}
     >

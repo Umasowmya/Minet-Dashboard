@@ -15,18 +15,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/payment" element={<Paymentpage />} />
           <Route path="/paymentSuccessful" element={<PaySucces />} />
           <Route path="/purchaseSuccessful" element={<PurSuccess />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
-
-    // <>
-    //   <ThemeProvider theme={customTheme}>
-    //     <Dashboard />
-    //   </ThemeProvider>
-    // </>
   );
 }
 

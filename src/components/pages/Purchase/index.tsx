@@ -10,7 +10,7 @@ import PaymentMethod from "../../organisms/Payment Method/index";
 import AmountDetails from "../../organisms/AmountDetails/index";
 import SpeedDelivery from "../../organisms/SpeedDelivery/index";
 
-const index = () => {
+const Purchase = () => {
   return (
     <Template
       Navbar={<Navbar />}
@@ -91,4 +91,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Purchase;

@@ -41,7 +41,7 @@ const Navbar = () => {
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ color: "secondary" }}
+          color="secondary"
         >
           {" "}
           SELL{" "}
