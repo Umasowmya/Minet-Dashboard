@@ -5,10 +5,10 @@ import Sidebar from "../../organisms/SideBar/index";
 import Footer from "../../organisms/Footer/index";
 import Success from "../../organisms/SuccessMolecule/index";
 
-const index = () => {
+const PurchaseSuccess = () => {
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Checkout" />}
       Sidebar={<Sidebar />}
       Content={
         <Success
@@ -23,4 +23,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default PurchaseSuccess;

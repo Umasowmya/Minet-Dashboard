@@ -23,14 +23,18 @@ const customStyles = makeStyles({
     alignItems: "center",
   },
 });
-const Navbar = () => {
+
+interface Props {
+  heading: string;
+}
+const Navbar = ({ heading }: Props) => {
   const classes = customStyles();
 
   return (
-    <Grid item container sx={{}}>
+    <Grid item container sx={{}} role="Navbar">
       <Grid item sx={{ position: "absolute", left: "100px", top: "10px" }}>
         <Typo
-          text="Checkout"
+          text={heading}
           variant="heading"
           component="div"
           className={classes.checkout}
@@ -41,7 +45,7 @@ const Navbar = () => {
         <Buttons
           variant="contained"
           className={classes.sellButton}
-          sx={{ color: "secondary" }}
+          color="secondary"
         >
           {" "}
           SELL{" "}

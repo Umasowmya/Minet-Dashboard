@@ -72,6 +72,7 @@ const Delivery = () => {
         zIndex: "0",
       }}
       spacing={5}
+      role="SpeedDelivery"
       className={classes.hoverfun}
     >
       <Grid item container sx={{ position: "relative" }}>
@@ -174,7 +175,7 @@ const Delivery = () => {
               width: "95%",
               display: { display },
               border: "1px solid #E8E8F7",
-              backgroundColor: flag1 === 0 ? "#F2F2F7" : "#FFFFFF",
+              backgroundColor: flag1 === 0 ? "ash" : "white",
               position: "absolute",
               top: "100%",
               p: 3,
@@ -227,7 +228,7 @@ const Delivery = () => {
               border: "1px solid #E8E8F7",
               position: "absolute",
               top: "160%",
-              backgroundColor: flag1 === 1 ? "#F2F2F7" : "#FFFFFF",
+              backgroundColor: flag1 === 1 ? "ash" : "white",
               p: 3,
             }}
             xs={12}
@@ -276,7 +277,7 @@ const Delivery = () => {
               display: { display },
               border: "1px solid #E8E8F7",
               position: "absolute",
-              backgroundColor: flag1 === 2 ? "#F2F2F7" : "#FFFFFF",
+              backgroundColor: flag1 === 2 ? "ash" : "white",
               top: "224%",
               p: 3,
             }}
@@ -327,7 +328,7 @@ const Delivery = () => {
               display: { display },
               border: "1px solid #E8E8F7",
               position: "absolute",
-              backgroundColor: flag1 === 3 ? "#F2F2F7" : "#FFFFFF",
+              backgroundColor: flag1 === 3 ? "ash" : "white",
               top: "289%",
               p: 3,
             }}

@@ -29,7 +29,7 @@ const customStyles = makeStyles({
 const InvestmentCard = ({ title, image, price }: investmentProps) => {
   const classes = customStyles();
   return (
-    <Grid sx={{ p: 2 }}>
+    <Grid sx={{ p: 2 }} role="InvestmentCard">
       <Grid item sx={{ display: "flex" }}>
         <Typo
           component="div"

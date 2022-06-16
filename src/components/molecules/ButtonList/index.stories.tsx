@@ -1,8 +1,6 @@
 import React from "react";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import graph from "../../../assets/graph.png";
-import explore from "../../../assets/explore.png";
 
 import Index from "./index";
 

@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Divider, Grid } from "@mui/material";
 import React from "react";
 import Template from "../../templates/index";
 import Footer from "../../organisms/Footer/index";
@@ -12,10 +12,22 @@ import symbol from "../../../assets/symbol.png";
 import PortfolioCard from "../../organisms/Portfolio";
 import InvestmentCard from "../../organisms/DiscoverCard";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
-const Dahboard = () => {
+import { makeStyles } from "@material-ui/core";
+import FunctionalGrid from "../../organisms/FunctionalGrid/index";
+import ButtonList from "../../molecules/ButtonList";
+
+const customStyles = makeStyles({
+  typoColor: {
+    color: "blue",
+  },
+});
+
+const Dashboard = () => {
+  const classes = customStyles();
+
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Dashboard" />}
       Sidebar={<SideBar />}
       Content={
         <>
@@ -41,6 +53,7 @@ const Dahboard = () => {
                   component="div"
                   variant="subtitle1"
                   width="126px"
+                  className={classes.typoColor}
                 />
                 <KeyboardArrowRight color="primary" />
               </Grid>
@@ -49,7 +62,7 @@ const Dahboard = () => {
                   display: "flex",
                   position: "absolute",
                   top: "108px",
-                  left: "860px",
+                  left: "850px",
                   alignItems: "center",
                 }}
               >
@@ -62,7 +75,7 @@ const Dahboard = () => {
 
                 <CreateIcon sx={{ height: "15px", width: "15px" }} />
               </Grid>
-              <Grid sx={{ position: "absolute", top: "100px", left: "920px" }}>
+              <Grid sx={{ position: "absolute", top: "100px", left: "900px" }}>
                 <img src={image} height="30px" width="64px" />
               </Grid>
             </Grid>
@@ -72,7 +85,7 @@ const Dahboard = () => {
               direction="column"
               sx={{
                 position: "absolute",
-                top: "180px",
+                top: "220px",
                 left: "120px",
               }}
             >
@@ -84,7 +97,7 @@ const Dahboard = () => {
                 sx={{
                   display: "flex",
                   position: "absolute",
-                  top: "480px",
+                  top: "550px",
                   left: "104px",
                   alignItems: "center",
                 }}
@@ -96,7 +109,7 @@ const Dahboard = () => {
                   width="180px"
                 />
               </Grid>
-              <Grid sx={{ position: "absolute", top: "480px", left: "920px" }}>
+              <Grid sx={{ position: "absolute", top: "550px", left: "900px" }}>
                 <img src={symbol} height="30px" width="64px" />
               </Grid>
             </Grid>
@@ -104,7 +117,7 @@ const Dahboard = () => {
             <Grid
               sx={{
                 position: "absolute",
-                top: "540px",
+                top: "630px",
                 left: "104px",
               }}
             >
@@ -116,7 +129,7 @@ const Dahboard = () => {
                 sx={{
                   display: "flex",
                   position: "absolute",
-                  top: "950px",
+                  top: "1200px",
                   left: "104px",
                   alignItems: "center",
                 }}
@@ -132,7 +145,7 @@ const Dahboard = () => {
                 sx={{
                   display: "flex",
                   position: "absolute",
-                  top: "950px",
+                  top: "1200px",
                   left: "540px",
                 }}
               >
@@ -147,9 +160,32 @@ const Dahboard = () => {
                   width="380px"
                 />
               </Grid>
+              <Grid sx={{ position: "absolute", top: "1290px", left: "100px" }}>
+                <ButtonList />
+              </Grid>
             </Grid>
-
-            <Grid></Grid>
+          </Grid>
+          <Grid
+            sx={{
+              height: "1350px",
+              width: "1%",
+              pt: 2,
+              position: "absolute",
+              left: "970px",
+              top: "70px",
+            }}
+          >
+            <Divider orientation="vertical" textAlign="left"></Divider>
+          </Grid>
+          <Grid
+            sx={{
+              position: "absolute",
+              top: "106px",
+              left: "998px",
+            }}
+            spacing={2}
+          >
+            <FunctionalGrid />
           </Grid>
         </>
       }
@@ -158,4 +194,4 @@ const Dahboard = () => {
   );
 };
 
-export default Dahboard;
+export default Dashboard;

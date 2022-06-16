@@ -13,7 +13,7 @@ import SpeedDelivery from "../../organisms/SpeedDelivery/index";
 const index = () => {
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Checkout" />}
       Sidebar={<Sidebar />}
       Content={
         <>

@@ -7,7 +7,12 @@ interface letter {
 
 const Ava = ({ image }: letter) => {
   return (
-    <Avatar src={image} alt="user" sx={{ width: "40px", height: "40px" }} />
+    <Avatar
+      src={image}
+      alt="user"
+      sx={{ width: "40px", height: "40px" }}
+      role="avatar"
+    />
   );
 };
 

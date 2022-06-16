@@ -9,13 +9,13 @@ const customStyles = makeStyles({
   footerElement: {
     width: "83px",
     height: "22px",
-    color: "#0052FF",
+    color: "blue",
   },
 
   footerElement2: {
     width: "83px",
     height: "22px",
-    color: "#343446",
+    color: "black",
   },
 
   footer: {
@@ -37,6 +37,7 @@ const Footer = () => {
         flexDirection: "row",
         alignItems: "center",
       }}
+      role="Footer"
     >
       <Grid item>
         <Typo

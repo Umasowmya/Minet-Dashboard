@@ -33,6 +33,7 @@ const Deposit = () => {
       }}
       className={classes.hoverfun}
       spacing={5}
+      role="deposit"
     >
       <Grid item container>
         <Typo
@@ -45,7 +46,6 @@ const Deposit = () => {
 
       <Grid
         item
-        direction="row"
         sx={{
           height: "90px",
           width: "100%",

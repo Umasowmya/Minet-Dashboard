@@ -15,24 +15,24 @@ const customStyles = makeStyles({
   scroll: {
     width: "840px",
     height: "284px",
-    "&:hover": {
-      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-    },
   },
 });
 
-const InvestmentCard = () => {
+const DiscoverCard = () => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [bitcoin, setBitcoin] = React.useState<assetsProps[]>([]);
 
-  axios.get(`http://localhost:3000/discoverItems`).then((res) => {
-    setBitcoin(res.data);
-  });
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    axios.get(`http://localhost:3000/discoverItems`).then((res) => {
+      setBitcoin(res.data);
+    });
+  }, []);
 
   return (
-    <div className={classes.scroll}>
+    <div className={classes.scroll} role="Discover">
       <Grid
         container
         direction="row"
@@ -60,4 +60,4 @@ const InvestmentCard = () => {
   );
 };
 
-export default InvestmentCard;
+export default DiscoverCard;

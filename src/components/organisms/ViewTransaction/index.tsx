@@ -8,6 +8,21 @@ import rupee from "../../../assets/rupee.png";
 import payingThough from "../../../assets/payingThrough.png";
 import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
+import axios from "axios";
+
+import {
+  GetSelectedItems,
+  PostPurchasedItems,
+  PostSoldItems,
+  DeleteSelectedItems,
+} from "../../../service/index";
+
+interface bitcoinProps {
+  id: number;
+  image: string;
+  title: string;
+  price: string;
+}
 
 const customStyles = makeStyles({
   transaction: {
@@ -72,6 +87,7 @@ const Transaction = ({
       border="1px solid #E8E8F7"
       className={classes.hoverfun}
       sx={{ width: "527px", height: "646px" }}
+      role="Transaction"
     >
       <Grid item sx={{ pt: 2 }}>
         <Typo
@@ -296,7 +312,26 @@ const Transaction = ({
             backgroundColor: "orange",
           }}
           onClick={() => {
-            navigate("/paymentSuccessful");
+            axios.get(`http://localhost:3000/selectedItems`).then((res) => {
+              const length = res.data.length;
+              console.log(length);
+              {
+                length > 0
+                  ? axios
+                      .post(
+                        "http://localhost:3000/soldItems",
+                        res.data[length - 1]
+                      )
+                      .then((resp) => {
+                        console.log(resp.data);
+                        navigate("/paymentSuccessful");
+                      })
+                  : alert("no items are selected");
+              }
+              axios.delete(
+                `http://localhost:3000/selectedItems/` + res.data[0].id
+              );
+            });
           }}
         >
           {button}
@@ -313,7 +348,30 @@ const Transaction = ({
             backgroundColor: "#0052FF",
           }}
           onClick={() => {
-            navigate("/purchaseSuccessful");
+            axios.get(`http://localhost:3000/selectedItems`).then((res) => {
+              const length = res.data.length;
+              console.log(length);
+              {
+                length > 0
+                  ? axios
+                      .post(
+                        "http://localhost:3000/purchasedItems",
+                        res.data[length - 1]
+                      )
+                      .then((resp) => {
+                        console.log(resp.data);
+                        navigate("/purchaseSuccessful");
+                      })
+                      .catch((error) => {
+                        alert("already purchased");
+                      })
+                  : alert("no items are selected");
+              }
+
+              axios.delete(
+                `http://localhost:3000/selectedItems/` + res.data[0].id
+              );
+            });
           }}
         >
           {button}

@@ -34,6 +34,7 @@ const ButtonCard = ({ label, Atom }: Props) => {
         width: "623px",
         p: 1,
       }}
+      role="amountCard"
     >
       <Grid item container>
         <Typo

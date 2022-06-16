@@ -38,6 +38,7 @@ const PaymentCard = () => {
         top: "0px",
         p: 2,
       }}
+      role="PaymentCard"
     >
       <Grid
         item

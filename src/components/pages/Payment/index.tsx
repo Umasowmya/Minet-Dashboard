@@ -10,10 +10,10 @@ import TotalBalance from "../../organisms/totalBalance/index";
 import AmountDetails from "../../organisms/AmountDetails/index";
 import Deposit from "../../organisms/deposit/index";
 
-const index = () => {
+const Payment = () => {
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Checkout" />}
       Sidebar={<SideBar />}
       Content={
         <>
@@ -98,4 +98,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Payment;

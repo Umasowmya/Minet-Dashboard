@@ -33,6 +33,7 @@ const Payment = () => {
       }}
       className={classes.hoverfun}
       spacing={5}
+      role="PaymentMethod"
     >
       <Grid item container>
         <Typo
@@ -45,7 +46,6 @@ const Payment = () => {
 
       <Grid
         item
-        direction="row"
         sx={{
           height: "90px",
           width: "100%",

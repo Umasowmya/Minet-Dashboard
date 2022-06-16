@@ -3,8 +3,10 @@ import { Button, Grid } from "@mui/material";
 import Typo from "../../atoms/Typo/index";
 import tick from "../../../assets/tick.png";
 import { makeStyles } from "@material-ui/core";
+import axios from "axios";
 
 interface coinProps {
+  id: number;
   image: string;
   title: string;
   price: string;
@@ -19,7 +21,7 @@ const customStyles = makeStyles({
   },
 });
 
-const Bitcoin = ({ image, title, price }: coinProps) => {
+const Bitcoin = ({ image, title, price, id }: coinProps) => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -35,12 +37,31 @@ const Bitcoin = ({ image, title, price }: coinProps) => {
     setFlag(!flag);
     setBorder(flag ? "2px solid #0052FF" : "2px solid #FFFFF");
     setTickval(flag ? tick : "");
-  };
 
+    {
+      flag
+        ? axios
+            .post("http://localhost:3000/selectedItems", {
+              id: id,
+              image: image,
+              title: title,
+              price: price,
+            })
+            .then((resp) => {
+              console.log(resp.data);
+            })
+        : axios
+            .delete(`http://localhost:3000/selectedItems/` + id)
+            .then((resp) => {
+              console.log(resp.data);
+            });
+    }
+  };
   return (
     <Button
       onClick={handleClick}
       sx={{ textTransform: "none", border: { border } }}
+      role="cryptoCard"
     >
       <Grid
         container
