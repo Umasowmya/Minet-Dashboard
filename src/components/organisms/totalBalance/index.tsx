@@ -32,6 +32,7 @@ const Balance = () => {
       }}
       className={classes.hoverfun}
       spacing={5}
+      role="Balance"
     >
       <Grid item container>
         <Typo

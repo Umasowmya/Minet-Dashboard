@@ -8,7 +8,7 @@ import Success from "../../organisms/SuccessMolecule/index";
 const PaymentSucess = () => {
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Checkout" />}
       Sidebar={<Sidebar />}
       Content={
         <Success

@@ -27,7 +27,12 @@ const SideBar = () => {
 
   return (
     <>
-      <Grid item direction="column" className={classes.verticalHeader} />
+      <Grid
+        item
+        direction="column"
+        className={classes.verticalHeader}
+        role="Sidebar"
+      />
 
       <Grid item sx={{ position: "absolute", top: "24px" }}>
         <img src={logo1} alt="logo1" width="30px" height="30px" />

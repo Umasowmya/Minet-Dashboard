@@ -26,6 +26,7 @@ const Assets = ({ cryptoImage, cryptoItem, price, graph }: assetsProps) => {
         },
       }}
       spacing={3}
+      role="assetCard"
     >
       <Grid item>
         <img src={cryptoImage} alt="explore" width="42px" height="42px" />

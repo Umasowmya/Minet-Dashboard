@@ -23,7 +23,7 @@ const customStyles = makeStyles({
 const TimeComponent = () => {
   const classes = customStyles();
   return (
-    <Grid container direction="row" justifyContent="end">
+    <Grid container direction="row" justifyContent="end" role="TimePeriod">
       <Grid
         sx={{
           border: "1px solid #E8E8F7",

@@ -41,12 +41,20 @@ const WalletCard = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [bitcoin, setBitcoin] = React.useState<cardProps[]>([]);
 
-  axios.get(`http://localhost:3000/portfolioItems`).then((res) => {
-    setBitcoin(res.data);
-  });
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    axios
+      .get(`http://localhost:3000/portfolioItems`)
+      .then((res) => {
+        setBitcoin(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
-    <div className={classes.scroll}>
+    <div className={classes.scroll} role="Wallet">
       <Grid
         container
         direction="row"

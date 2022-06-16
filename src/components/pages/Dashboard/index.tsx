@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Dashboard" />}
       Sidebar={<SideBar />}
       Content={
         <>

@@ -32,7 +32,7 @@ const DiscoverCard = () => {
   }, []);
 
   return (
-    <div className={classes.scroll}>
+    <div className={classes.scroll} role="Discover">
       <Grid
         container
         direction="row"

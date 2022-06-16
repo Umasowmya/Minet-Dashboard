@@ -7,6 +7,9 @@ import Card from "../../molecules/PortfolioCard";
 import dollar from "../../../assets/rupee.png";
 import { makeStyles } from "@material-ui/core";
 import axios from "axios";
+import TransactionCard from "../../molecules/TransactionCard/index";
+import soldImage from "../../../assets/sold.png";
+import purchasedImage from "../../../assets/purchased.png";
 
 const customStyles = makeStyles({
   typoColor: {
@@ -15,13 +18,43 @@ const customStyles = makeStyles({
 });
 
 interface bitcoinProps {
+  id: number;
   image: string;
   title: string;
   price: string;
-  status: string;
 }
 
 const Portfolio = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [purchased, setPurchased] = React.useState<bitcoinProps[]>([]);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [sold, setSold] = React.useState<bitcoinProps[]>([]);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    axios
+      .get(`http://localhost:3000/purchasedItems`)
+      .then((res) => {
+        setPurchased(res.data);
+      })
+      .catch((error) => {
+        console.log("no items");
+      });
+  }, []);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    axios
+      .get(`http://localhost:3000/soldItems`)
+      .then((res) => {
+        setSold(res.data);
+      })
+      .catch((error) => {
+        console.log("no items");
+      });
+  }, []);
+
   const classes = customStyles();
   return (
     <>
@@ -71,7 +104,23 @@ const Portfolio = () => {
           />
         </Grid>
 
-        <Grid></Grid>
+        <Grid>
+          {sold.map((value: bitcoinProps) => {
+            return (
+              <Grid item>
+                <TransactionCard image={soldImage} title={value.title} />
+              </Grid>
+            );
+          })}
+
+          {purchased.map((value: bitcoinProps) => {
+            return (
+              <Grid item>
+                <TransactionCard image={purchasedImage} title={value.title} />
+              </Grid>
+            );
+          })}
+        </Grid>
       </Grid>
     </>
   );

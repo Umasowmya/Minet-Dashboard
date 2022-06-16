@@ -66,6 +66,7 @@ const AmountComponent = ({
       }}
       spacing={5}
       className={classes.hoverfun}
+      role="amountDetails"
     >
       <Grid item container sx={{ p: 1 }}>
         <Typo

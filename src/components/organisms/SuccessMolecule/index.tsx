@@ -19,6 +19,7 @@ const SuccessComponent = ({ text, button1, button2 }: Props) => {
       alignItems="center"
       justifyContent="center"
       style={{ minHeight: "100vh" }}
+      role="Success"
     >
       <Grid
         item

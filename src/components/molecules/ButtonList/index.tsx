@@ -32,7 +32,7 @@ const ButtonList = () => {
 
   const classes = customStyles();
   return (
-    <Grid container direction="row" sx={{ display: "flex" }}>
+    <Grid container direction="row" sx={{ display: "flex" }} role="buttonList">
       <KeyboardArrowLeft />
 
       {bitcoin.map((value: Props) => {

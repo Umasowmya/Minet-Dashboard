@@ -13,7 +13,7 @@ import Deposit from "../../organisms/deposit/index";
 const Payment = () => {
   return (
     <Template
-      Navbar={<Navbar />}
+      Navbar={<Navbar heading="Checkout" />}
       Sidebar={<SideBar />}
       Content={
         <>

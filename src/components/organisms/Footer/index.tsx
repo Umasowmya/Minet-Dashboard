@@ -37,6 +37,7 @@ const Footer = () => {
         flexDirection: "row",
         alignItems: "center",
       }}
+      role="Footer"
     >
       <Grid item>
         <Typo

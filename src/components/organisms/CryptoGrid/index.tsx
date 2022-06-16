@@ -3,8 +3,10 @@ import { Grid } from "@mui/material";
 import CustomGrid from "../../molecules/Bitcoin/index";
 import axios from "axios";
 import { makeStyles } from "@material-ui/core";
+import { GetCryptoItems } from "../../../service/index";
 
 interface bitcoinProps {
+  id: number;
   image: string;
   title: string;
   price: string;
@@ -39,15 +41,21 @@ const customStyles = makeStyles({
 const CryptoComponent = () => {
   const classes = customStyles();
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  // // eslint-disable-next-line react-hooks/rules-of-hooks
   const [bitcoin, setBitcoin] = React.useState<bitcoinProps[]>([]);
 
-  axios.get(`http://localhost:3000/cryptoItems`).then((res) => {
-    setBitcoin(res.data);
-  });
+  // // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    // axios.get(`http://localhost:3000/cryptoItems`).then((res) => {
+    //   setBitcoin(res.data);
+    // });
+    GetCryptoItems().then((res) => {
+      setBitcoin(res.data);
+    });
+  }, []);
 
   return (
-    <div className={classes.scroll}>
+    <div className={classes.scroll} role="CryptoGrid">
       <Grid
         container
         direction="row"
@@ -61,6 +69,7 @@ const CryptoComponent = () => {
           return (
             <Grid item>
               <CustomGrid
+                id={value.id}
                 image={value.image}
                 title={value.title}
                 price={value.price}

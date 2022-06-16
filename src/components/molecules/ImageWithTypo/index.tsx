@@ -43,6 +43,7 @@ const ImageWithTypo = ({ image, value1, value2 }: Props) => {
         top: "0%",
         left: "30px",
       }}
+      role="ImageWithTypo"
     >
       <Grid
         item
