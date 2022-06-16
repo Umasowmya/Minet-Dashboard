@@ -140,22 +140,8 @@
     }
   ],
   "selectedItems": [],
-  "purchasedItems": [
-    {
-      "id": 1,
-      "image": "explore.png",
-      "title": "Bitcoin",
-      "price": "$3,406,069.54"
-    }
-  ],
-  "soldItems": [
-    {
-      "id": 1,
-      "image": "explore.png",
-      "title": "Bitcoin",
-      "price": "$3,406,069.54"
-    }
-  ],
+  "purchasedItems": [],
+  "soldItems": [],
   "portfolioItems": [
     {
       "image": "explore.png",
