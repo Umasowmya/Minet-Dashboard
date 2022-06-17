@@ -13,6 +13,7 @@ const customStyles = makeStyles({
 });
 
 interface Props {
+  id: number;
   buttonval: string;
   border: string;
   background: string;
@@ -38,6 +39,7 @@ const ButtonList = () => {
         return (
           <Button
             variant="outlined"
+            key={value.id}
             sx={{
               background: value.background,
               textTransform: "none",

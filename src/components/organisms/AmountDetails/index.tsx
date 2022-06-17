@@ -79,13 +79,11 @@ const AmountComponent = ({
 
       <Grid
         item
-        direction="row"
         sx={{
           display: "flex",
           alignItems: "center",
           width: "663px",
         }}
-        spacing={3}
       >
         <Card
           Atom={<Button variant="outlined">{buttonval}</Button>}
@@ -115,7 +113,6 @@ const AmountComponent = ({
 
       <Grid
         item
-        direction="row"
         sx={{
           display: "flex",
           p: 2,
@@ -123,7 +120,6 @@ const AmountComponent = ({
           alignItems: "center",
           position: "relative",
         }}
-        spacing={3}
       >
         <Grid
           sx={{

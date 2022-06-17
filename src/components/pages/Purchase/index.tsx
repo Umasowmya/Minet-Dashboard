@@ -17,7 +17,10 @@ const index = () => {
       Sidebar={<Sidebar />}
       Content={
         <>
-          <Grid sx={{ position: "absolute", left: "96px", top: "106px" }}>
+          <Grid
+            sx={{ position: "absolute", left: "96px", top: "106px" }}
+            role="Purchase"
+          >
             <Grid>
               <Typography variant="subtitle1" component="div">
                 Buy Crypto

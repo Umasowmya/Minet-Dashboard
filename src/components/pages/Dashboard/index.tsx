@@ -31,7 +31,7 @@ const Dashboard = () => {
       Sidebar={<SideBar />}
       Content={
         <>
-          <Grid>
+          <Grid role="Dashboard">
             <Grid container direction="column">
               <Grid
                 sx={{
@@ -183,7 +183,6 @@ const Dashboard = () => {
               top: "106px",
               left: "998px",
             }}
-            spacing={2}
           >
             <FunctionalGrid />
           </Grid>

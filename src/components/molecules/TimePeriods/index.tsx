@@ -21,6 +21,7 @@ const customStyles = makeStyles({
 });
 
 const TimeComponent = () => {
+  var i = 1;
   const classes = customStyles();
   return (
     <Grid container direction="row" justifyContent="end" role="TimePeriod">
@@ -36,7 +37,11 @@ const TimeComponent = () => {
       >
         {array.map((value: string) => {
           return (
-            <Grid item sx={{ p: 0.5, width: "32px", color: "#7D7D89" }}>
+            <Grid
+              item
+              sx={{ p: 0.5, width: "32px", color: "#7D7D89" }}
+              key={i++}
+            >
               {value === "1M" ? (
                 <>
                   <Typo

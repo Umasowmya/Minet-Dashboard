@@ -45,7 +45,6 @@ const Balance = () => {
 
       <Grid
         item
-        direction="row"
         alignItems="center"
         sx={{
           height: "80px",
