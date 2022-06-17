@@ -1,18 +1,16 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import explore from "../../../assets/explore.png";
 import Typo from "../../atoms/Typo";
 import image from "../../../assets/24h.png";
-import graph from "../../../assets/graph.png";
 
-interface assetsProps {
+interface AssetProps {
   cryptoImage: string;
   cryptoItem: string;
   price: string;
   graph: string;
 }
 
-const Assets = ({ cryptoImage, cryptoItem, price, graph }: assetsProps) => {
+const Assets = ({ cryptoImage, cryptoItem, price, graph }: AssetProps) => {
   return (
     <Grid
       container

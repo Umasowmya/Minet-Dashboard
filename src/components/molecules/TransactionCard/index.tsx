@@ -11,12 +11,12 @@ const customStyles = makeStyles({
   },
 });
 
-interface transactionProps {
+interface TransactionProps {
   title: string;
   image: string;
 }
 
-const TransactionCard = ({ title, image }: transactionProps) => {
+const TransactionCard = ({ title, image }: TransactionProps) => {
   const classes = customStyles();
   const d = new Date();
   const p = title + " " + "BTC";

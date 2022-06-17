@@ -4,7 +4,7 @@ import Typo from "../../atoms/Typo";
 import investment from "../../../assets/investment.png";
 import { makeStyles } from "@material-ui/core";
 
-interface investmentProps {
+interface InvestmentProps {
   title: string;
   image: string;
   price: string;
@@ -26,7 +26,7 @@ const customStyles = makeStyles({
   },
 });
 
-const InvestmentCard = ({ title, image, price }: investmentProps) => {
+const InvestmentCard = ({ title, image, price }: InvestmentProps) => {
   const classes = customStyles();
   return (
     <Grid sx={{ p: 2 }} role="InvestmentCard">

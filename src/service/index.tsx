@@ -1,12 +1,5 @@
 import axios from "axios";
 
-interface bitcoinProps {
-  id: number;
-  image: string;
-  title: string;
-  price: string;
-}
-
 export const GetCryptoItems = () => {
   return axios.get(`http://localhost:3000/cryptoItems`);
 };

@@ -4,7 +4,7 @@ import PortfolioCard from "../../molecules/PortfolioCard";
 import { makeStyles } from "@material-ui/core";
 import { GetPortfolioItems } from "../../../service/index";
 
-interface cardProps {
+interface CardProps {
   image: string;
   cryptoItem: string;
   group: string;
@@ -39,7 +39,7 @@ const WalletCard = () => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [bitcoin, setBitcoin] = React.useState<cardProps[]>([]);
+  const [bitcoin, setBitcoin] = React.useState<CardProps[]>([]);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
@@ -63,7 +63,7 @@ const WalletCard = () => {
           height: "180px",
         }}
       >
-        {bitcoin.map((value: cardProps) => {
+        {bitcoin.map((value: CardProps) => {
           return (
             <Grid item>
               <PortfolioCard

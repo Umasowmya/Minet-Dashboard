@@ -1,4 +1,3 @@
-import { ClassNames } from "@emotion/react";
 import { Grid } from "@mui/material";
 import React from "react";
 import Typo from "../../atoms/Typo";
@@ -21,7 +20,7 @@ const customStyles = makeStyles({
 });
 
 const TimeComponent = () => {
-  var i = 1;
+  let i = 1;
   const classes = customStyles();
   return (
     <Grid container direction="row" justifyContent="end" role="TimePeriod">

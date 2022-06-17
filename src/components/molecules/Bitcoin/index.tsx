@@ -5,7 +5,7 @@ import tick from "../../../assets/tick.png";
 import { makeStyles } from "@material-ui/core";
 import axios from "axios";
 
-interface coinProps {
+interface CoinProps {
   id: number;
   image: string;
   title: string;
@@ -21,7 +21,7 @@ const customStyles = makeStyles({
   },
 });
 
-const Bitcoin = ({ image, title, price, id }: coinProps) => {
+const Bitcoin = ({ image, title, price, id }: CoinProps) => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
