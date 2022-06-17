@@ -1,99 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/SpeedDelivery/index.test.tsx">
-    <testCase name="SpeedDelivery should render SpeedDelivery element" duration="209"/>
-  </file>
   <file path="/home/umaS/Desktop/project2/src/components/molecules/ButtonList/index.test.tsx">
-    <testCase name="ButtonList should render Button list" duration="96"/>
+    <testCase name="ButtonList should render Button list" duration="93"/>
   </file>
-  <file path="/home/umaS/Desktop/project2/src/components/pages/Payment/index.test.tsx">
-    <testCase name="PaymentPage should render PaymentPage element" duration="639"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/pages/Purchase/index.test.tsx">
-    <testCase name="Purchase should render Purchase element" duration="742"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/pages/Dashboard/index.test.tsx">
-    <testCase name="Dashboard should render Dashboard element" duration="566"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/App.test.tsx">
-    <testCase name="renders navigation bar" duration="793"/>
-    <testCase name="renders sidebar bar" duration="281"/>
-    <testCase name="renders footer element" duration="252"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/ViewTransaction/index.test.tsx">
-    <testCase name="Transaction should render Transaction element" duration="202"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/Bitcoin/index.test.tsx">
-    <testCase name="ButtonCard should render Bitcoin element" duration="107"/>
-    <testCase name="ButtonCard should render Crypto element" duration="69"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/AmountDetails/index.test.tsx">
-    <testCase name="AmountDetails should render Amount details element" duration="193"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/deposit/index.test.tsx">
-    <testCase name="Deposit should render deposit element" duration="96"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/TransactionCard/index.test.tsx">
-    <testCase name="Tran should render Transaction card element" duration="90"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/CryptoGrid/index.test.tsx">
-    <testCase name="CryptoGrid should render crypto items" duration="63"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/PortfolioCard/index.test.tsx">
-    <testCase name="PortfolioCard should render Portfolio card element" duration="76"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/TimePeriods/index.test.tsx">
-    <testCase name="TimePeriod should render Time period element" duration="85"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/PaymentCard/index.test.tsx">
-    <testCase name="ButtonList should render Payment card element" duration="68"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/Portfolio/index.test.tsx">
-    <testCase name="Portfolio should render Portfolio element" duration="125"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/AmountCard/ButtonCard.test.tsx">
-    <testCase name="ButtonCard should render Amount element" duration="58"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/totalBalance/index.test.tsx">
-    <testCase name="Balance should render Balance element" duration="70"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/Payment Method/index.test.tsx">
-    <testCase name="PaymentMethod should render PaymentMethod element" duration="100"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/DiscoverCard/index.test.tsx">
-    <testCase name="Discover should render Discover element" duration="49"/>
-  </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/ImageWithTypo/index.test.tsx">
-    <testCase name="ButtonList should render Image with Typo element" duration="77"/>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/SpeedDelivery/index.test.tsx">
+    <testCase name="SpeedDelivery should render SpeedDelivery element" duration="205"/>
   </file>
   <file path="/home/umaS/Desktop/project2/src/components/organisms/Footer/index.test.tsx">
-    <testCase name="Footer should render Footer element" duration="159"/>
+    <testCase name="Footer should render Footer element" duration="193"/>
   </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/Navbar/index.test.tsx">
-    <testCase name="Navbar should render Navbar element" duration="173"/>
+  <file path="/home/umaS/Desktop/project2/src/components/pages/Dashboard/index.test.tsx">
+    <testCase name="Dashboard should render Dashboard element" duration="606"/>
   </file>
-  <file path="/home/umaS/Desktop/project2/src/components/molecules/InvestmentCard/index.test.tsx">
-    <testCase name="ButtonList should render Investment card element" duration="59"/>
+  <file path="/home/umaS/Desktop/project2/src/components/pages/Payment/index.test.tsx">
+    <testCase name="PaymentPage should render PaymentPage element" duration="756"/>
   </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/WalletCard/index.test.tsx">
-    <testCase name="Wallet should render Wallet element" duration="59"/>
+  <file path="/home/umaS/Desktop/project2/src/components/pages/Purchase/index.test.tsx">
+    <testCase name="Purchase should render Purchase element" duration="775"/>
   </file>
-  <file path="/home/umaS/Desktop/project2/src/components/organisms/SuccessMolecule/index.test.tsx">
-    <testCase name="Success should render Success element" duration="132"/>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/ViewTransaction/index.test.tsx">
+    <testCase name="Transaction should render Transaction element" duration="224"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/AmountDetails/index.test.tsx">
+    <testCase name="AmountDetails should render Amount details element" duration="168"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/Bitcoin/index.test.tsx">
+    <testCase name="ButtonCard should render Bitcoin element" duration="121"/>
+    <testCase name="ButtonCard should render Crypto element" duration="63"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/totalBalance/index.test.tsx">
+    <testCase name="Balance should render Balance element" duration="109"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/Portfolio/index.test.tsx">
+    <testCase name="Portfolio should render Portfolio element" duration="116"/>
   </file>
   <file path="/home/umaS/Desktop/project2/src/components/organisms/SideBar/index.test.tsx">
-    <testCase name="Sidebar should render Sidebar element" duration="65"/>
+    <testCase name="Sidebar should render Sidebar element" duration="64"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/CryptoGrid/index.test.tsx">
+    <testCase name="CryptoGrid should render crypto items" duration="75"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/AmountCard/ButtonCard.test.tsx">
+    <testCase name="ButtonCard should render Amount element" duration="70"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/deposit/index.test.tsx">
+    <testCase name="Deposit should render deposit element" duration="78"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/WalletCard/index.test.tsx">
+    <testCase name="Wallet should render Wallet element" duration="50"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/InvestmentCard/index.test.tsx">
+    <testCase name="ButtonList should render Investment card element" duration="52"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/DiscoverCard/index.test.tsx">
+    <testCase name="Discover should render Discover element" duration="57"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/ImageWithTypo/index.test.tsx">
+    <testCase name="ButtonList should render Image with Typo element" duration="60"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/Payment Method/index.test.tsx">
+    <testCase name="PaymentMethod should render PaymentMethod element" duration="78"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/TransactionCard/index.test.tsx">
+    <testCase name="Tran should render Transaction card element" duration="63"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/PortfolioCard/index.test.tsx">
+    <testCase name="PortfolioCard should render Portfolio card element" duration="56"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/Navbar/index.test.tsx">
+    <testCase name="Navbar should render Navbar element" duration="167"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/PaymentCard/index.test.tsx">
+    <testCase name="ButtonList should render Payment card element" duration="58"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/organisms/SuccessMolecule/index.test.tsx">
+    <testCase name="Success should render Success element" duration="113"/>
   </file>
   <file path="/home/umaS/Desktop/project2/src/components/molecules/Assets/index.test.tsx">
-    <testCase name="ButtonCard should render Asset element" duration="65"/>
+    <testCase name="ButtonCard should render Asset element" duration="86"/>
   </file>
-  <file path="/home/umaS/Desktop/project2/src/components/atoms/Buttons/Buttons.test.tsx">
-    <testCase name="Buttons should render Buttons element" duration="49"/>
+  <file path="/home/umaS/Desktop/project2/src/App.test.tsx">
+    <testCase name="renders navigation bar" duration="628"/>
+    <testCase name="renders sidebar bar" duration="218"/>
+    <testCase name="renders footer element" duration="243"/>
   </file>
   <file path="/home/umaS/Desktop/project2/src/components/atoms/Avatar/Ava.test.tsx">
-    <testCase name="Avatar should render Avatar element" duration="28"/>
+    <testCase name="Avatar should render Avatar element" duration="36"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/molecules/TimePeriods/index.test.tsx">
+    <testCase name="TimePeriod should render Time period element" duration="67"/>
+  </file>
+  <file path="/home/umaS/Desktop/project2/src/components/atoms/Buttons/Buttons.test.tsx">
+    <testCase name="Buttons should render Buttons element" duration="37"/>
   </file>
   <file path="/home/umaS/Desktop/project2/src/components/atoms/Typo/index.test.tsx">
-    <testCase name="CustomTypo should render CustomTypo element" duration="19"/>
+    <testCase name="CustomTypo should render CustomTypo element" duration="20"/>
   </file>
 </testExecutions>
