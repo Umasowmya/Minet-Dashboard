@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import Asset from "../../molecules/Assets/index";
 import { GetDiscoverItems } from "../../../service/index";
 
-interface assetsProps {
+interface AssetProps {
   cryptoImage: string;
   cryptoItem: string;
   price: string;
@@ -22,7 +22,7 @@ const DiscoverCard = () => {
   const classes = customStyles();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [bitcoin, setBitcoin] = React.useState<assetsProps[]>([]);
+  const [bitcoin, setBitcoin] = React.useState<AssetProps[]>([]);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
@@ -43,7 +43,7 @@ const DiscoverCard = () => {
           display: "flex",
         }}
       >
-        {bitcoin.map((value: assetsProps) => {
+        {bitcoin.map((value: AssetProps) => {
           return (
             <Grid item sx={{ p: 1 }}>
               <Asset

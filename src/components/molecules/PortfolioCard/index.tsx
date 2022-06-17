@@ -3,7 +3,7 @@ import React from "react";
 import Typo from "../../atoms/Typo";
 import { makeStyles } from "@material-ui/core";
 
-interface cardProps {
+interface CardProps {
   image: string;
   cryptoItem: string;
   group: string;
@@ -37,10 +37,8 @@ const PortfolioCard = ({
   group,
   price,
   profit,
-}: cardProps) => {
+}: CardProps) => {
   const classes = customStyles();
-
-  const p = { profit };
 
   return (
     <Grid

@@ -5,7 +5,6 @@ import TimeComponent from "../../molecules/TimePeriods";
 import image from "../../../assets/investment.png";
 import imageBitcoin from "../../../assets/investmentBitcoin.png";
 import analysisGraph from "../../../assets/analysisGraph.png";
-import Typo from "../../atoms/Typo";
 
 const Portfolio = () => {
   return (

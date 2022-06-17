@@ -8,7 +8,6 @@ import rupee from "../../../assets/rupee.png";
 import payingThough from "../../../assets/payingThrough.png";
 import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
-import axios from "axios";
 
 import {
   GetSelectedItems,
@@ -16,13 +15,6 @@ import {
   PostSoldItems,
   DeleteSelectedItems,
 } from "../../../service/index";
-
-interface bitcoinProps {
-  id: number;
-  image: string;
-  title: string;
-  price: string;
-}
 
 const customStyles = makeStyles({
   transaction: {

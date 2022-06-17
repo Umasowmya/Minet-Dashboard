@@ -1,11 +1,11 @@
 import React from "react";
 import { Avatar } from "@mui/material";
 
-interface letter {
+interface Letter {
   image: string;
 }
 
-const Ava = ({ image }: letter) => {
+const Ava = ({ image }: Letter) => {
   return (
     <Avatar
       src={image}

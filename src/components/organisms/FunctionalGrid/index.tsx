@@ -17,7 +17,7 @@ const customStyles = makeStyles({
   },
 });
 
-interface bitcoinProps {
+interface BitcoinProps {
   id: number;
   image: string;
   title: string;
@@ -26,10 +26,10 @@ interface bitcoinProps {
 
 const Portfolio = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [purchased, setPurchased] = React.useState<bitcoinProps[]>([]);
+  const [purchased, setPurchased] = React.useState<BitcoinProps[]>([]);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [sold, setSold] = React.useState<bitcoinProps[]>([]);
+  const [sold, setSold] = React.useState<BitcoinProps[]>([]);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
@@ -103,7 +103,7 @@ const Portfolio = () => {
         </Grid>
 
         <Grid>
-          {sold.map((value: bitcoinProps) => {
+          {sold.map((value: BitcoinProps) => {
             return (
               <Grid item>
                 <TransactionCard image={soldImage} title={value.title} />
@@ -111,7 +111,7 @@ const Portfolio = () => {
             );
           })}
 
-          {purchased.map((value: bitcoinProps) => {
+          {purchased.map((value: BitcoinProps) => {
             return (
               <Grid item>
                 <TransactionCard image={purchasedImage} title={value.title} />

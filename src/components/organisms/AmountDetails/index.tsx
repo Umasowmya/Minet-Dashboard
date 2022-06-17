@@ -6,7 +6,7 @@ import Slider from "@mui/material/Slider";
 import Card from "../../molecules/AmountCard/ButtonCard";
 import { makeStyles } from "@material-ui/core";
 
-interface amountProps {
+interface AmountProps {
   buttonval: string;
   value: string;
   price: string;
@@ -38,7 +38,7 @@ const AmountComponent = ({
   value,
   price,
   quantity,
-}: amountProps) => {
+}: AmountProps) => {
   function valuetext(value: number) {
     return `1BTC=$${value}`;
   }

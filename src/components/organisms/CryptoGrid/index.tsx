@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Grid } from "@mui/material";
 import CustomGrid from "../../molecules/Bitcoin/index";
-import axios from "axios";
 import { makeStyles } from "@material-ui/core";
 import { GetCryptoItems } from "../../../service/index";
 
-interface bitcoinProps {
+interface BitcoinProps {
   id: number;
   image: string;
   title: string;
@@ -42,13 +41,10 @@ const CryptoComponent = () => {
   const classes = customStyles();
 
   // // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [bitcoin, setBitcoin] = React.useState<bitcoinProps[]>([]);
+  const [bitcoin, setBitcoin] = React.useState<BitcoinProps[]>([]);
 
   // // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
-    // axios.get(`http://localhost:3000/cryptoItems`).then((res) => {
-    //   setBitcoin(res.data);
-    // });
     GetCryptoItems().then((res) => {
       setBitcoin(res.data);
     });
@@ -65,7 +61,7 @@ const CryptoComponent = () => {
           height: "280px",
         }}
       >
-        {bitcoin.map((value: bitcoinProps) => {
+        {bitcoin.map((value: BitcoinProps) => {
           return (
             <Grid item>
               <CustomGrid
