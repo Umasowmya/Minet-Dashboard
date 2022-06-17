@@ -59,7 +59,7 @@ const PaymentCard = () => {
         />
       </Grid>
 
-      <Grid item direction="column">
+      <Grid item>
         <Grid item sm={1}>
           <Typo
             variant="subtitle1"

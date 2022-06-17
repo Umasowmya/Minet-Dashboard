@@ -33,7 +33,7 @@ const Portfolio = () => {
           justifyContent: "space-between",
         }}
       >
-        <Grid sx={{ display: "flex", width: "360px" }} spacing={2}>
+        <Grid sx={{ display: "flex", width: "360px" }}>
           <Grid item>
             <InvestmentCard
               title="Total Investment"

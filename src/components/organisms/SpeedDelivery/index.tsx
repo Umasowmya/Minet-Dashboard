@@ -87,8 +87,6 @@ const Delivery = () => {
 
       <Grid
         item
-        direction="row"
-        spacing={0}
         sx={{
           height: "90px",
           width: "95%",
@@ -121,7 +119,7 @@ const Delivery = () => {
             />
           </Grid>
 
-          <Grid item direction="column">
+          <Grid item>
             <Grid item sm={1}>
               <Typo
                 component="div"
@@ -170,6 +168,7 @@ const Delivery = () => {
           }}
         >
           <Grid
+            item
             sx={{
               height: "60%",
               width: "95%",
@@ -221,6 +220,7 @@ const Delivery = () => {
           }}
         >
           <Grid
+            item
             sx={{
               height: "65%",
               width: "95%",
@@ -271,6 +271,7 @@ const Delivery = () => {
           }}
         >
           <Grid
+            item
             sx={{
               height: "65%",
               width: "95%",
@@ -322,6 +323,7 @@ const Delivery = () => {
           }}
         >
           <Grid
+            item
             sx={{
               height: "60%",
               width: "95%",

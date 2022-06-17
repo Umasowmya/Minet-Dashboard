@@ -23,6 +23,7 @@ const Payment = () => {
               left: "96px",
               top: "106px",
             }}
+            role="PaymentPage"
           >
             <Grid>
               <Typography variant="subtitle1" component="div">

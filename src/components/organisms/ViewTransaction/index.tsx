@@ -129,7 +129,7 @@ const Transaction = ({
 
       <Grid item container direction="column">
         <Grid item alignItems="center">
-          <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
+          <Grid alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
               {transaction === "You are buying" ? (
                 <img src={payment} alt="payment" />
@@ -137,7 +137,7 @@ const Transaction = ({
                 <img src={payingThough} alt="paying  through" />
               )}
             </Grid>
-            <Grid direction="row">
+            <Grid>
               <Grid>
                 <Typo
                   variant="caption"
@@ -169,11 +169,11 @@ const Transaction = ({
               top: "22%",
             }}
           ></Grid>
-          <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
+          <Grid alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
               <img src={delivery} alt="delivery" />
             </Grid>
-            <Grid direction="row">
+            <Grid>
               <Grid>
                 <Typo
                   variant="caption"
@@ -208,7 +208,7 @@ const Transaction = ({
           >
             <Typo text="" component="div" width="10px" />
           </Grid>
-          <Grid direction="row" alignItems="center" sx={{ display: "flex" }}>
+          <Grid alignItems="center" sx={{ display: "flex" }}>
             <Grid item sx={{ p: 4 }}>
               {transaction === "You are buying" ? (
                 <img src={deposit} alt="deposit" />
@@ -216,7 +216,7 @@ const Transaction = ({
                 <img src={rupee} alt="rupee" />
               )}
             </Grid>
-            <Grid direction="row">
+            <Grid>
               <Grid>
                 <Typo
                   variant="caption"
@@ -253,46 +253,46 @@ const Transaction = ({
       </Grid>
 
       <Grid sx={{ width: "480px", height: "250px" }}>
-        <Grid container direction="row" xs={12} alignItems="center">
-          <Grid xs={3}>
+        <Grid container direction="row" alignItems="center">
+          <Grid item xs={3}>
             <Typography component="div" width="100px" variant="overline">
               0.0234510 BTC
             </Typography>
           </Grid>
-          <Grid xs={6}>
+          <Grid item xs={6}>
             <Divider textAlign="left"></Divider>
           </Grid>
-          <Grid xs={3} alignItems="center">
+          <Grid item xs={3} alignItems="center">
             <Typography component="div" width="100px" variant="overline">
               0.0234510 BTC
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction="row" xs={12} alignItems="center">
-          <Grid xs={3}>
+        <Grid container direction="row" alignItems="center">
+          <Grid item xs={3}>
             <Typography component="div" width="150px" variant="overline">
               transaction fee
             </Typography>
           </Grid>
-          <Grid xs={6}>
+          <Grid item xs={6}>
             <Divider textAlign="left"></Divider>
           </Grid>
-          <Grid xs={3} alignItems="center">
+          <Grid item xs={3} alignItems="center">
             <Typography component="div" width="100px" variant="overline">
               $1,000.00
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction="row" xs={12} alignItems="center">
-          <Grid xs={1}>
+        <Grid container direction="row" alignItems="center">
+          <Grid item xs={1}>
             <Typography component="div" width="100px" variant="body1">
               Total
             </Typography>
           </Grid>
-          <Grid xs={8}>
+          <Grid item xs={8}>
             <Divider textAlign="left"></Divider>
           </Grid>
-          <Grid xs={3} alignItems="center">
+          <Grid item xs={3} alignItems="center">
             <Typography component="div" width="100px" variant="body1">
               $35,000.00
             </Typography>
