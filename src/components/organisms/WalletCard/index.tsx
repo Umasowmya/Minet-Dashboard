@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import PortfolioCard from "../../molecules/PortfolioCard";
-import axios from "axios";
 import { makeStyles } from "@material-ui/core";
+import { GetPortfolioItems } from "../../../service/index";
 
 interface cardProps {
   image: string;
@@ -43,8 +43,7 @@ const WalletCard = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
-    axios
-      .get(`http://localhost:3000/portfolioItems`)
+    GetPortfolioItems()
       .then((res) => {
         setBitcoin(res.data);
       })

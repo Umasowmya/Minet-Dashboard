@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 import { Grid } from "@mui/material";
 import axios from "axios";
 import Asset from "../../molecules/Assets/index";
+import { GetDiscoverItems } from "../../../service/index";
 
 interface assetsProps {
   cryptoImage: string;
@@ -26,7 +27,7 @@ const DiscoverCard = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
-    axios.get(`http://localhost:3000/discoverItems`).then((res) => {
+    GetDiscoverItems().then((res) => {
       setBitcoin(res.data);
     });
   }, []);

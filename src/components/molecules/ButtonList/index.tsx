@@ -2,8 +2,7 @@ import { Button, Grid } from "@mui/material";
 import React from "react";
 import { KeyboardArrowRight, KeyboardArrowLeft } from "@mui/icons-material";
 import { makeStyles } from "@material-ui/core";
-import axios from "axios";
-import { EXTRA_COLORS } from "../../../theme";
+import { GetButtonList } from "../../../service/index";
 
 const customStyles = makeStyles({
   highlight: {
@@ -25,7 +24,7 @@ const ButtonList = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
-    axios.get(`http://localhost:3000/buttonList`).then((res) => {
+    GetButtonList().then((res) => {
       setBitcoin(res.data);
     });
   }, []);

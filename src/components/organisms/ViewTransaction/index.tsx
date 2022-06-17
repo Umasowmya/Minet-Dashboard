@@ -312,25 +312,22 @@ const Transaction = ({
             backgroundColor: "orange",
           }}
           onClick={() => {
-            axios.get(`http://localhost:3000/selectedItems`).then((res) => {
+            GetSelectedItems().then((res) => {
               const length = res.data.length;
               console.log(length);
               {
                 length > 0
-                  ? axios
-                      .post(
-                        "http://localhost:3000/soldItems",
-                        res.data[length - 1]
-                      )
+                  ? PostSoldItems(res.data[length - 1])
                       .then((resp) => {
                         console.log(resp.data);
                         navigate("/paymentSuccessful");
                       })
+                      .catch((error) => {
+                        alert("already sold");
+                      })
                   : alert("no items are selected");
               }
-              axios.delete(
-                `http://localhost:3000/selectedItems/` + res.data[0].id
-              );
+              DeleteSelectedItems(res.data[0].id);
             });
           }}
         >
@@ -348,16 +345,12 @@ const Transaction = ({
             backgroundColor: "#0052FF",
           }}
           onClick={() => {
-            axios.get(`http://localhost:3000/selectedItems`).then((res) => {
+            GetSelectedItems().then((res) => {
               const length = res.data.length;
               console.log(length);
               {
                 length > 0
-                  ? axios
-                      .post(
-                        "http://localhost:3000/purchasedItems",
-                        res.data[length - 1]
-                      )
+                  ? PostPurchasedItems(res.data[length - 1])
                       .then((resp) => {
                         console.log(resp.data);
                         navigate("/purchaseSuccessful");
@@ -368,9 +361,7 @@ const Transaction = ({
                   : alert("no items are selected");
               }
 
-              axios.delete(
-                `http://localhost:3000/selectedItems/` + res.data[0].id
-              );
+              DeleteSelectedItems(res.data[0].id);
             });
           }}
         >

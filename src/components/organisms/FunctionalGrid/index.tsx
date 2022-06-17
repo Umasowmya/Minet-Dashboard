@@ -6,10 +6,10 @@ import ListItems from "../../organisms/WalletCard/index";
 import Card from "../../molecules/PortfolioCard";
 import dollar from "../../../assets/rupee.png";
 import { makeStyles } from "@material-ui/core";
-import axios from "axios";
 import TransactionCard from "../../molecules/TransactionCard/index";
 import soldImage from "../../../assets/sold.png";
 import purchasedImage from "../../../assets/purchased.png";
+import { GetPurchasedItems, GetSoldtems } from "../../../service/index";
 
 const customStyles = makeStyles({
   typoColor: {
@@ -33,8 +33,7 @@ const Portfolio = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
-    axios
-      .get(`http://localhost:3000/purchasedItems`)
+    GetPurchasedItems()
       .then((res) => {
         setPurchased(res.data);
       })
@@ -45,8 +44,7 @@ const Portfolio = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
-    axios
-      .get(`http://localhost:3000/soldItems`)
+    GetSoldtems()
       .then((res) => {
         setSold(res.data);
       })
