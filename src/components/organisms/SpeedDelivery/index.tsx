@@ -157,8 +157,10 @@ const Delivery = () => {
           </Grid>
         </Grid>
         <span
+          role="InstantButton"
           onClick={() => {
             setSpeed("Instant: 2-5 minutes");
+            console.log("clicked");
             setFee("Transaction fees:0.001 BTC");
             setFlag1(0);
           }}
@@ -209,6 +211,7 @@ const Delivery = () => {
         </span>
 
         <span
+          role="FasterButton"
           onClick={() => {
             setSpeed("Faster : 4 hours");
             setFee("Transaction fees:0.0001 BTC");
@@ -260,6 +263,7 @@ const Delivery = () => {
           </Grid>
         </span>
         <span
+          role="FastButton"
           onClick={() => {
             setSpeed("Fast : 120 hours");
             setFee("Transaction fees:0.00001 BTC");
@@ -312,6 +316,7 @@ const Delivery = () => {
         </span>
 
         <span
+          role="NoneButton"
           onClick={() => {
             setSpeed("None");
             setFee("None");

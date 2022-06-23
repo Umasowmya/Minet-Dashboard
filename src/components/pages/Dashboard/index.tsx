@@ -13,7 +13,7 @@ import PortfolioCard from "../../organisms/Portfolio";
 import InvestmentCard from "../../organisms/DiscoverCard";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { makeStyles } from "@material-ui/core";
-import FunctionalGrid from "../../organisms/FunctionalGrid/index";
+import FunctionalGrid from "../../organisms/TransactionHistory/index";
 import ButtonList from "../../molecules/ButtonList";
 
 const customStyles = makeStyles({
@@ -76,7 +76,7 @@ const Dashboard = () => {
                 <CreateIcon sx={{ height: "15px", width: "15px" }} />
               </Grid>
               <Grid sx={{ position: "absolute", top: "100px", left: "900px" }}>
-                <img src={image} height="30px" width="64px" />
+                <img src={image} alt="edit" height="30px" width="64px" />
               </Grid>
             </Grid>
 
@@ -110,7 +110,12 @@ const Dashboard = () => {
                 />
               </Grid>
               <Grid sx={{ position: "absolute", top: "550px", left: "900px" }}>
-                <img src={symbol} height="30px" width="64px" />
+                <img
+                  src={symbol}
+                  alt="portfolio value"
+                  height="30px"
+                  width="64px"
+                />
               </Grid>
             </Grid>
 

@@ -3,9 +3,7 @@ import React from "react";
 import CryptoCard from "./index";
 import "@testing-library/jest-dom";
 import explore from "../../../assets/explore.png";
-import { Button } from "@mui/material";
-
-const mockFunction = jest.fn();
+import { GetSelectedItems } from "../../../service/index";
 
 describe("ButtonCard", () => {
   it("should render Bitcoin element", () => {
@@ -21,7 +19,7 @@ describe("ButtonCard", () => {
     expect(inputElement).toBeInTheDocument();
   });
 
-  it("should render Crypto element", () => {
+  it("should render Bitcoin element", () => {
     render(
       <CryptoCard
         id={1}
@@ -32,6 +30,10 @@ describe("ButtonCard", () => {
     );
     const buttonElement = screen.getByRole("cryptoCard");
     fireEvent.click(buttonElement);
-    expect(buttonElement).toBeInTheDocument();
+    GetSelectedItems().then((res) => {
+      const length = res.data.length;
+    });
+
+    expect(length == 1);
   });
 });

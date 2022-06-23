@@ -303,6 +303,7 @@ const Transaction = ({
             left: "5%",
             backgroundColor: "orange",
           }}
+          role="sellButton"
           onClick={() => {
             GetSelectedItems().then((res) => {
               const length = res.data.length;
@@ -314,7 +315,7 @@ const Transaction = ({
                         console.log(resp.data);
                         navigate("/paymentSuccessful");
                       })
-                      .catch((error) => {
+                      .catch(() => {
                         alert("already sold");
                       })
                   : alert("no items are selected");
@@ -336,6 +337,7 @@ const Transaction = ({
             left: "5%",
             backgroundColor: "#0052FF",
           }}
+          role="buyButton"
           onClick={() => {
             GetSelectedItems().then((res) => {
               const length = res.data.length;
@@ -347,7 +349,7 @@ const Transaction = ({
                         console.log(resp.data);
                         navigate("/purchaseSuccessful");
                       })
-                      .catch((error) => {
+                      .catch(() => {
                         alert("already purchased");
                       })
                   : alert("no items are selected");

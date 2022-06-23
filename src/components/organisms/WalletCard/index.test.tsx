@@ -9,4 +9,11 @@ describe("Wallet", () => {
     const inputElement = screen.getByRole("Wallet");
     expect(inputElement).toBeInTheDocument();
   });
+
+  it("should render Wallet element", () => {
+    render(<Wallet />);
+    const inputElement = screen.getByRole("Wallet");
+    const portfolio = inputElement.getElementsByTagName("PortfolioCard");
+    expect(portfolio).size == 1;
+  });
 });
