@@ -12,6 +12,7 @@ describe("PortfolioCard", () => {
         cryptoItem="Bitcoin"
         group="BTC"
         price="$34,000.00"
+        profit="-1.3%"
       />
     );
     const inputElement = screen.getByRole("PortfolioCard");

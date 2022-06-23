@@ -1,8 +1,8 @@
 import { Divider, Grid } from "@mui/material";
 import React from "react";
-import Typo from "./../../atoms/Typo/index";
+import Typo from "../../atoms/Typo/index";
 import portfolio from "../../../assets/portfolio.png";
-import ListItems from "../../organisms/WalletCard/index";
+import ListItems from "../WalletCard/index";
 import Card from "../../molecules/PortfolioCard";
 import dollar from "../../../assets/rupee.png";
 import { makeStyles } from "@material-ui/core";
@@ -37,7 +37,7 @@ const Portfolio = () => {
       .then((res) => {
         setPurchased(res.data);
       })
-      .catch((error) => {
+      .catch(() => {
         console.log("no items");
       });
   }, []);
@@ -48,7 +48,7 @@ const Portfolio = () => {
       .then((res) => {
         setSold(res.data);
       })
-      .catch((error) => {
+      .catch(() => {
         console.log("no items");
       });
   }, []);
@@ -56,7 +56,7 @@ const Portfolio = () => {
   const classes = customStyles();
   return (
     <>
-      <Grid sx={{ display: "flex" }}>
+      <Grid sx={{ display: "flex" }} role="FunctionalGrid">
         <Typo component="div" text="My portfolio" variant="subtitle1" />
         <Typo component="div" text="" variant="subtitle2" width="200px" />
 

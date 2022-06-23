@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, getByRole, render, screen } from "@testing-library/react";
 import React from "react";
 import Transaction from "./index";
 import "@testing-library/jest-dom";
@@ -22,5 +22,6 @@ describe("Transaction", () => {
     );
     const inputElement = screen.getByRole("Transaction");
     expect(inputElement).toBeInTheDocument();
+    expect(inputElement).toBeTruthy();
   });
 });

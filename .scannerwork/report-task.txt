@@ -1,0 +1,7 @@
+organization=umasowmya
+projectKey=minet-dashboard
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.29819
+dashboardUrl=https://sonarcloud.io/dashboard?id=minet-dashboard
+ceTaskId=AYGKWWQ-IQKQ7Qd8RvpX
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYGKWWQ-IQKQ7Qd8RvpX

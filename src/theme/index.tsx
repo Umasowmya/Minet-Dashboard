@@ -137,18 +137,3 @@ const customTheme = createTheme({
   },
 });
 export default customTheme;
-
-export const EXTRA_COLORS = {
-  lightOrange: "rgba(247, 147, 26, 0.2)",
-  lightBlack: "rgba(34, 34, 34, 0.2)",
-  lightPink: "rgba(230, 0, 122, 0.2)",
-  lightViolet: "rgba(98, 126, 234, 0.2)",
-  lightGreen: "rgba(38, 161, 123, 0.2)",
-  lightGrey: "rgba(25, 25, 113, 0.2)",
-  lightCream: "rgba(219, 201, 132, 0.2)",
-  pink: "#E6007A",
-  violet: "#627EEAe",
-  green: "#26A17B",
-  grey: "#191971",
-  cream: "#DBC984",
-};
